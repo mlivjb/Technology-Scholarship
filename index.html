@@ -1,85 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="menubar">
-        <a href="maps.html">
-            <img src="/images/maps_icon.png" alt="">
-        </a>
-        <a href="notes.html">
-            <img src="/images/notes_icon.png" alt="">
-        </a>
-        <a href="index.html">
-            <img class="active" src="/images/Home_icon.png" alt="">
-        </a>
-        <a href="collections.html">
-            <img src="/images/collections_icon.png" alt="">
-        </a>
-        <a href="pathways.html">
-            <img src="/images/pathways_icon.png" alt="">
-        </a>
-    </div>
-
-    <div class="content">
-        <div class="icon_header">
-            <img src="/images/profile_icon.png" alt="">
-            <h2>"USERNAME"</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- MENUBAR -->
+        <div class="menubar">
+            <a href="maps.html">
+                <img src="/images/maps_icon.png" alt="">
+            </a>
+            <a href="notes.html">
+                <img src="/images/notes_icon.png" alt="">
+            </a>
+            <!-- Filler -->
+            <a href="#"></a>
+            <div class="active three">
+                <a href="index.html">
+                    <img src="/images/Home_icon.png" alt="">
+                </a>
+            </div>
+            <a href="collections.html">
+                <img src="/images/collections_icon.png" alt="">
+            </a>
+            <a href="storyline.html">
+                <img src="/images/storyline_icon.png" alt="">
+            </a>
         </div>
-    
-        <h1>Verse of the week</h1>
-        <div class="verse_of_the_week">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div class="content">
+            <div class="icon_header">
+                <img src="/images/profile_icon.png" alt="">
+                <h2>"USERNAME"</h2>
+            </div>
+            <h1>Verse of the week</h1>
+            <div class="verse_of_the_week">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Iste voluptas voluptate doloremque, minus ipsa
                 non ipsam delectus velit a omnis, odio, recusandae
                 officiis nobis dolorem labore nemo quibusdam! Odit,
                 esse!
-            </p>
-            <p class="ref">Reference</p>
-        </div>
-        
-        <h1>Current Stories</h1>
-        <div class="current_stories_scroll">
-            <div class="current_story_block">
-                <a id="#" href="stories.html" >
-                    "story"
-                </a>
-                <a href="collections.html">"collection"</a>
+                </p>
+                <p class="ref">Reference</p>
             </div>
-            
-            <div class="current_story_block">
-                <a id="#" href="stories.html" >
-                    "story"
-                </a>
-                <a href="collections.html">"collection"</a>
+            <h1>Current Stories</h1>
+            <div class="current_stories_scroll">
+                <div class="current_story_block">
+                    <a id="#" href="stories.html">
+                        "story"
+                    </a>
+                    <a href="collections.html">"collection"</a>
+                </div>
+                <div class="current_story_block">
+                    <a id="#" href="stories.html">
+                        "story"
+                    </a>
+                    <a href="collections.html">"collection"</a>
+                </div>
+            </div>
+            <div class="icon_header settings">
+                <img src="/images/settings icon.png" alt="">
+                <h1>Settings</h1>
+            </div>
+            <div class="settings">
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <p>dark mode</p>
             </div>
         </div>
-
-        <div class="icon_header settings">
-            <img src="/images/settings icon.png" alt="">
-            <h1>Settings</h1>
-        </div>
-        <div class="settings">
-            <label class="toggle">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <p>dark mode</p>
-        </div>
-        
-
-    
-    </div>
-
-    
-
-
-</body>
-
+    </body>
 </html>

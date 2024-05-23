@@ -13,6 +13,7 @@ body {
     max-height: 15%;
     align-items: baseline;
     position: fixed;
+    z-index: 1;
 }
 
 .menubar a {
@@ -29,12 +30,51 @@ body {
     width: 100%;
 }
 
-.menubar .active {
-    border: red solid;
+.active img {
+    display: flex;
+    width: 570%;
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+    padding: 10%;
 }
+
+
+.menubar .active {
+    border-radius:50%;
+    background-color: grey;
+    z-index: 1;
+    width: 25%;
+    height: 13%;
+    bottom: 0%;
+    position: fixed;
+}
+
+
+.active.one {
+    left: 0;
+}
+
+.active.two {
+    left: 17%;
+}
+
+.active.three {
+    left:37%;
+}
+
+.active.four {
+    left:57%;
+}
+
+.active.five {
+    left: 77%;
+}
+
 
 .content {
     padding: 5%;
+    margin-bottom: 20%;
 }
 
 .icon_header {
@@ -71,7 +111,7 @@ body {
 .current_story_block{
     display: inline;
     overflow: hidden;
-    margin: 5%;
+    margin: 0;
     background-color: grey;
     padding: 30%;
 }
@@ -144,7 +184,6 @@ input:checked + .slider:before {
     align-items: center;
     width: 100%;
     margin: 0;
-    
 }
 
 .settings p {
