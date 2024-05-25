@@ -3,6 +3,18 @@ body {
     background-color: rgb(224, 224, 224);
 }
 
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 180%;
+}
+
+p {
+    font-size: 130%;
+}
+
 .menubar {
     margin: 0;
     background-color: grey;
@@ -14,6 +26,7 @@ body {
     align-items: baseline;
     position: fixed;
     z-index: 1;
+    /* border: 1px black solid; */
 }
 
 .menubar a {
@@ -39,7 +52,6 @@ body {
     padding: 10%;
 }
 
-
 .menubar .active {
     border-radius:50%;
     background-color: grey;
@@ -48,33 +60,55 @@ body {
     height: 13%;
     bottom: 0%;
     position: fixed;
+    /* border: 1px black solid; */
 }
 
 
 .active.one {
     left: 0;
+    background-image: url(/images/maps_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .active.two {
     left: 17%;
+    background-image: url(/images/notes_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .active.three {
     left:37%;
+    background-image: url(/images/Home_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .active.four {
     left:57%;
+    background-image: url(/images/collections_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
 
 .active.five {
     left: 77%;
+    background-image: url(/images/storyline_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
 .content {
     padding: 5%;
     margin-bottom: 20%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .icon_header {
@@ -190,4 +224,96 @@ input:checked + .slider:before {
     padding-left: 5%;
     font-size: 150%;
 
+}
+
+.story_block {
+    width: 80%;
+    display: flex;
+    background-color: grey;
+    padding: 2% 10%;
+    border-radius: 10px;
+    margin: 10% 0;
+}
+
+.story_block a {
+    text-align: center;
+    font-size: 150%;
+    color: white;
+}
+
+.story_block a:hover {
+    color: black;
+    transition: 0.5s ease;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.collection_block {
+    background-color: grey;
+    padding: 2% 10%;
+    border-radius: 10px;
+    margin: 10% 0; 
+}
+
+.collection_block a {
+    color: white;
+    text-align: center;
+    font-size: 120%;
+}
+
+.collection_block a:hover {
+    color: black;
+    transition: 0.5s ease;
+}
+
+.step {
+    display: flex;
+    width: 100%;
+}
+
+.step_type {
+    width: 35%;
+    flex-direction: column;
+    background-color: grey;
+} 
+
+.psg {
+    background-image: url(/images/notes_icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.step_info {
+    padding: 2% 5%;
+    justify-content: left;
+    font-size: 100%;
+    display: flex;
+}
+
+
+.vl {
+    border-left: 3px solid black;
+    margin: 0 10%;
+    height: 100px;
+}
+
+.passage, .question {
+    display: inline-block;
+}
+
+.passage p {
+    font-size: 120%;
+}
+
+.verse {
+    background-color: rgba(78, 78, 78, 0.288);
+    color: black;
+    padding: 3%;
+    border-radius: 10px;
 }
