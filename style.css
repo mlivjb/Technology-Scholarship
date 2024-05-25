@@ -66,28 +66,28 @@ p {
 
 .active.one {
     left: 0;
-    background-image: url(/images/maps_icon.png);
+    background-image: url("images/maps_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .active.two {
     left: 17%;
-    background-image: url(/images/notes_icon.png);
+    background-image: url("images/notes_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .active.three {
     left:37%;
-    background-image: url(/images/Home_icon.png);
+    background-image: url("images/Home_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .active.four {
     left:57%;
-    background-image: url(/images/collections_icon.png);
+    background-image: url("images/collections_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -95,7 +95,7 @@ p {
 
 .active.five {
     left: 77%;
-    background-image: url(/images/storyline_icon.png);
+    background-image: url("images/storyline_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -284,7 +284,7 @@ input:checked + .slider:before {
 } 
 
 .psg {
-    background-image: url(/images/notes_icon.png);
+    background-image: url("images/notes_icon.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
