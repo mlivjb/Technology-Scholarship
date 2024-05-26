@@ -233,12 +233,16 @@ input:checked + .slider:before {
     padding: 2% 10%;
     border-radius: 10px;
     margin: 10% 0;
+    background-image: url(images/moses.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .story_block a {
-    text-align: center;
+    text-align:right;
     font-size: 150%;
     color: white;
+    padding-left: 30%;
 }
 
 .story_block a:hover {
@@ -316,4 +320,10 @@ input:checked + .slider:before {
     color: black;
     padding: 3%;
     border-radius: 10px;
+}
+
+img.profile {
+    width: 50%;
+    display: flex;
+    margin: auto;
 }
