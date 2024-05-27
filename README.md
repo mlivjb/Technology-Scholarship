@@ -1,6 +1,6 @@
 # Technology-Scholarship
 link to site:
-> mlivjb.github.io/Technology-Scholarship/ 
+> (https://mlivjb.github.io/Technology-Scholarship/)
 ## Description 
 A bible resource for those that are curious about the bible. This is an educational resource used to teach people about the bible, not persuade them to faith. 
 ## What it's about
