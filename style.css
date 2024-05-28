@@ -347,7 +347,7 @@ input:checked + .slider:before {
 }
 
 img.profile {
-    width: 50%;
+    width: 80%;
     display: flex;
     margin: auto;
 }
