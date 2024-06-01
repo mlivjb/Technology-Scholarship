@@ -11,9 +11,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  working-directory: bible_curious
   build:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./bible_curious
 
     steps:
       - uses: actions/checkout@v4
