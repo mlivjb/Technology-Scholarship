@@ -43,7 +43,7 @@ jobs:
         with:
           name: python-app
           path: |
-            release.zip
+            bible_curious/release.zip
             !venv/
 
   deploy:
