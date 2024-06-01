@@ -104,6 +104,9 @@ p {
 .content {
     padding: 5%;
     margin-bottom: 20%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
