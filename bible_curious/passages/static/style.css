@@ -133,6 +133,40 @@ a {
     padding: 0.5%;
 }
 
+
+.verse_of_the_week.law {
+    border: #cf2f23 solid 2px;
+    border-radius: 3%;
+}
+.verse_of_the_week.history {
+    border: #174ab0 solid 2px;
+    border-radius: 3%;
+}
+.verse_of_the_week.poetry {
+    border: #ed8cea solid 2px;
+    border-radius: 3%;
+}
+.verse_of_the_week.gospels {
+    border: #70634b solid 2px;
+    border-radius: 3%;
+}
+.verse_of_the_week.church {
+    border: #594b70 solid 2px;
+    border-radius: 3%;
+}
+.verse_of_the_week.letters {
+    border: #e89817 solid 2px;
+    border-radius: 3%;
+}
+.verse_of_the_week.prohecy {
+    border: #f0e556 solid 2px;
+    border-radius: 3%;
+}
+.verse_of_the_week .history {
+    border: #174ab0 solid 2px;
+    
+}
+
 .current_stories_scroll {
     overflow: auto;
     color: white;
