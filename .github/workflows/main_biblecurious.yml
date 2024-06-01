@@ -13,8 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./bible_curious
+    defaults:
+      run:
+        working-directory: ./bible_curious
 
     steps:
       - uses: actions/checkout@v4
