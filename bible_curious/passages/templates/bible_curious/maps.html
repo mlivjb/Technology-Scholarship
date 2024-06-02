@@ -1,31 +1,32 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Maps</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
         <!-- MENUBAR -->
         <div class="menubar">
             <div class="active one">
-                <a href="maps.html">
+                <a href="maps">
                 </a>
             </div>
             <!-- Filler -->
             <a href="#"></a>
-            <a href="notes.html">
+            <a href="notes">
                 <img src="{% static 'images/notes_icon.png' %}" alt="">
             </a>
-            <a href="index.html">
-                <img src="images/Home_icon.png" alt="">
+            <a href="index">
+                <img src="{% static 'images/Home_icon.png' %}" alt="">
             </a>
-            <a href="collections.html">
-                <img src="images/collections_icon.png" alt="">
+            <a href="collections">
+                <img src="{% static 'images/collections_icon.png' %}" alt="">
             </a>
-            <a href="storyline.html">
-                <img src="images/storyline_icon.png" alt="">
+            <a href="storyline">
+                <img src="{% static 'images/storyline_icon.png' %}" alt="">
             </a>
         </div>
 

@@ -1,42 +1,43 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passage + passage name</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
     <!-- MENUBAR -->
     <div class="menubar">
-        <a href="maps.html">
-            <img src="images/maps_icon.png" alt="">
+        <a href="maps">
+            <img src="{% static 'images/maps_icon.png' %}" alt="">
         </a>
-        <a href="notes.html">
-            <img src="images/notes_icon.png" alt="">
+        <a href="notes">
+            <img src="{% static 'images/notes_icon.png' %}" alt="">
         </a>
-        <a href="index.html">
-            <img src="images/Home_icon.png" alt="">
+        <a href="index">
+            <img src="{% static 'images/Home_icon.png' %}" alt="">
         </a>
-        <a href="collections.html">
-            <img src="images/collections_icon.png" alt="">
+        <a href="collections">
+            <img src="{% static 'images/collections_icon.png' %}" alt="">
         </a>
         <!-- Filler -->
         <a href="#"></a>
         <div class="active five">
-            <a href="storyline.html"></a>
+            <a href="storyline"></a>
         </div>
     </div>
     <div class="content">
         <h3>
-            <a href="storyline.html">&larr; storyline</a>
+            <a href="../moses">&larr; storyline</a>
         </h3>
         <div class="passage">
             <h1>Moses Flees to Midian</h1>
             Exodus 2:11-21
-            <img class="profile" src="images/moses.png" alt="">
+            <img class="profile" src="{% static 'collections/moses.png' %}" alt="">
             <h2>Moses Kills an Egyptian</h2>
             <p>One day, after Moses had grown up, he went out to where his own
                 people were and watched them at their hard labour. He saw an

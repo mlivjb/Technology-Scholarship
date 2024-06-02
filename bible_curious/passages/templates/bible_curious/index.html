@@ -4,33 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
         <!-- MENUBAR -->
         <div class="menubar">
-            <a href="maps.html">
-                <img src="images/maps_icon.png" alt="">
+            <a href="maps">
+                <img src="{% static 'images/maps_icon.png' %}" alt="">
             </a>
-            <a href="notes.html">
-                <img src="images/notes_icon.png" alt="">
+            <a href="notes">
+                <img src="{% static 'images/notes_icon.png' %}" alt="">
             </a>
             <!-- Filler -->
             <a href="#"></a>
             <div class="active three">
-                <a href="index.html">
+                <a href="index">
                 </a>
             </div>
-            <a href="collections.html">
-                <img src="images/collections_icon.png" alt="">
+            <a href="collections">
+                <img src="{% static 'images/collections_icon.png' %}" alt="">
             </a>
-            <a href="storyline.html">
-                <img src="images/storyline_icon.png" alt="">
+            <a href="storyline">
+                <img src="{% static 'images/storyline_icon.png' %}" alt="">
             </a>
         </div>
         <div class="content">
             <div class="icon_header">
-                <img src="images/profile_icon.png" alt="">
+                <img src="{% static 'images/profile_icon.png' %}" alt="">
                 <h2>"USERNAME"</h2>
             </div>
             <h1>Verse of the week</h1>
@@ -43,16 +43,16 @@
             <h1>Current Stories</h1>
             <div class="current_stories_scroll">
                 <div class="current_story_block">
-                    <a class="c_s_story" href="storyline.html">
+                    <a class="c_s_story" href="storyline">
                         Moses
                     </a>
-                    <a class="c_s_collection" href="collections.html">Leaders of the Bible</a>
+                    <a class="c_s_collection" href="collections">Leaders of the Bible</a>
                 </div>
                 <div class="current_story_block">
-                    <a class="c_s_story" href="storyline.html">
+                    <a class="c_s_story" href="storyline">
                         Abraham
                     </a>
-                    <a class="c_s_collection" href="collections.html">Leaders of the Bible</a>
+                    <a class="c_s_collection" href="collections">Leaders of the Bible</a>
                 </div>
             </div>
             <div class="icon_header settings">
