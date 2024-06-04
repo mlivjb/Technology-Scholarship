@@ -102,11 +102,11 @@ p {
 
 
 .content {
-  padding: 5%;
-  margin-bottom: 20%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+    padding: 5%;
+    margin-bottom: 20%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
@@ -128,12 +128,6 @@ a {
     background-color: grey;
     padding: 3%;
     margin: 0;
-}
-
-.verse_of_the_week .ref {
-    background-color: white;
-    width: 50%;
-    padding: 0.5%;
 }
 
 .current_stories_scroll {
@@ -352,4 +346,8 @@ img.profile {
     width: 80%;
     display: flex;
     margin: auto;
+}
+
+.shake:hover {
+    animation: tilt-shaking 0.25s infinite;
 }
