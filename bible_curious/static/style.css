@@ -128,6 +128,16 @@ a {
     background-color: grey;
     padding: 3%;
     margin: 0;
+    font-weight:bold;
+}
+
+.verse_of_the_week .ref {
+    font-weight:lighter;
+}
+
+.verse_of_the_week.letters {
+    /* box-shadow: 0 0 15px 3px #e68932; */
+    background-image: linear-gradient(to bottom right, #e68932, orange, white);
 }
 
 .current_stories_scroll {

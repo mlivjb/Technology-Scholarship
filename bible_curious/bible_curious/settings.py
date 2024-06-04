@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv('SECRET_KEY', 'django-insecure-dks^+d0=b@$u6%&ung05s98$9pwazyjr0#3=#+lf^qk_y#c1vv')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('DEBUG', '0').lower() in ['true', 't', '1']
+DEBUG = getenv('DEBUG', '1').lower() in ['true', 't', '1']
 ALLOWED_HOSTS = getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split(' ')
 CSRF_TRUSTED_ORIGINS = getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost').split(' ')
 SECURE_SSL_REDIRECT = \
