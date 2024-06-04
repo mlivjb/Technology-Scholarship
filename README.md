@@ -15,3 +15,6 @@ the specifications include
 
 ## How I should use it
 This is made as a mobile web app, and must be simple, accessible and include interesting visual content 
+
+## TIPS
+stop editing your assets it won't work. :)
