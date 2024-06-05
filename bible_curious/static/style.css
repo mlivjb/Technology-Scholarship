@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-color: rgb(224, 224, 224);
+    /* background-color: rgb(224, 224, 224); */
+    background-color: #fbe8da;
 }
 
 h1 {
@@ -17,7 +18,7 @@ p {
 
 .menubar {
     margin: 0;
-    background-color: grey;
+    background-color: #a8c7f0;
     bottom: 0;
     width: 100%;
     overflow: hidden;
@@ -43,7 +44,7 @@ p {
     width: 100%;
 }
 
-.active img {
+.active img{
     display: flex;
     width: 570%;
     z-index: 2;
@@ -54,7 +55,7 @@ p {
 
 .menubar .active {
     border-radius:50%;
-    background-color: grey;
+    background-color: #a8c7f0;
     z-index: 1;
     width: 25%;
     height: 13%;
@@ -62,7 +63,6 @@ p {
     position: fixed;
     /* border: 1px black solid; */
 }
-
 
 .active.one {
     left: 0;
@@ -90,7 +90,6 @@ p {
     background-image: url("images/collections_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
-
 }
 
 .active.five {
@@ -125,10 +124,10 @@ a {
 
 .verse_of_the_week {
     border-radius: 3%;
-    background-color: grey;
     padding: 3%;
     margin: 0;
     font-weight:bold;
+    color: black;
 }
 
 .verse_of_the_week .ref {
@@ -139,6 +138,46 @@ a {
     /* box-shadow: 0 0 15px 3px #e68932; */
     background-image: linear-gradient(to bottom right, #e68932, orange, white);
 }
+
+.verse_of_the_week.gospels {
+    /* box-shadow: 0 0 15px 3px #70634b; */
+    background-image: linear-gradient(to bottom right, #70634b, #998a6d, white);
+    color: white;
+}
+
+.verse_of_the_week.law {
+    /* box-shadow: 0 0 15px 3px #cf2f23; */
+    background-image: linear-gradient(to bottom right, #cf2f23, #dc5318, white);
+}
+
+.verse_of_the_week.history {
+    /* box-shadow: 0 0 15px 3px #174ab0; */
+    background-image: linear-gradient(to bottom right, #174ab0, #2e62c9, white);
+    color: white;
+}
+
+.verse_of_the_week.poetry {
+    /* box-shadow: 0 0 15px 3px #ed8cea; */
+    background-image: linear-gradient(to bottom right, #ed8cea, #f1b1ef, white);
+}
+
+.verse_of_the_week.prophets {
+    /* box-shadow: 0 0 15px 3px #396641; */
+    background-image: linear-gradient(to bottom right, #396641, #55875e, white);
+    color: white;
+}
+
+.verse_of_the_week.church {
+    /* box-shadow: 0 0 15px 3px #594b70; */
+    background-image: linear-gradient(to bottom right, #594b70, #72628b, white);
+    color: white;
+}
+
+.verse_of_the_week.prophecy {
+    /* box-shadow: 0 0 15px 3px #ed8cea; */
+    background-image: linear-gradient(to bottom right, #f0e556, #f8f3a8, white);
+}
+
 
 .current_stories_scroll {
     overflow: auto;
@@ -163,7 +202,7 @@ a {
     padding: 15%;
     height: 80%;
     display: block;
-    background-color: grey;
+    background-color: #ab739a;
     border-radius: 5px;
     font-size: 200%;
     background-image: url(collections/moses.png);
@@ -176,14 +215,11 @@ a {
     padding: 5%;
     text-align: center;
     display: block;
-    background-color: grey;
+    background-color: #ab739a;
     border-radius: 5px;
     font-size: 120%;
 }
 
-.settings {
-    margin-top: 3%;
-}
 
 .settings .toggle {
     position: relative;
@@ -245,6 +281,7 @@ input:checked + .slider:before {
 }
 
 .settings {
+    margin-top: 3%;
     display: flex;
     align-items: center;
     width: 100%;

@@ -26,4 +26,5 @@ urlpatterns = [
     path("notes", views.notes, name="notes"),
     path("maps", views.maps, name="maps"),
     # path('admin/', admin.site.urls),
+    path("verse", views.verse, name="verse")
 ]

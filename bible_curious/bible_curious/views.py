@@ -11,3 +11,7 @@ def maps(request):
 def notes(request):
     context = {}
     return render(request, "bible_curious/notes.html", context)
+
+def verse(request):
+    context = {}
+    return render(request, "bible_curious/verse_info.html", context)

@@ -8,7 +8,6 @@ def collection_page(page_name):
 
 
 
-
 # def index(request):
 #     context = {}
 #     return render(request, "collections/index.html", context)

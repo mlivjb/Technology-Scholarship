@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verse info</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <!-- MENUBAR -->
+        <div class="menubar">
+            <a href="maps">
+                <img src="{% static 'images/maps_icon.png' %}" alt="">
+            </a>
+            <a href="notes">
+                <img src="{% static 'images/notes_icon.png' %}" alt="">
+            </a>
+            <!-- Filler -->
+            <a href="#"></a>
+            <div class="active three">
+                <a href="index"></a>
+            </div>
+            <a href="/collections">
+                <img src="{% static 'images/collections_icon.png' %}" alt="">
+            </a>
+            <a href="collections/leaders_of_the_bible/moses">
+                <img src="{% static 'images/storyline_icon.png' %}" alt="">
+            </a>
+        </div>
+        
+        <div class="content">
+            <h3>
+                <a href="/">&larr; Home</a>
+                
+            </h3>
+            <h1>Verse Information</h1>
+            <h2>verse of the day</h2>
+            <div class="verse_of_the_week letters">
+                <p>
+                    Cast all your anxieties on him because he cares for you.
+                </p>
+                <p class="ref">1 Peter 5:7 NIV</p>
+            </div>
+        </div>
+    </body>
+</html>
