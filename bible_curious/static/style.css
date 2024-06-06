@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /* background-color: rgb(224, 224, 224); */
-    background-color: #fbe8da;
+    background-color: white;
 }
 
 h1 {
@@ -347,30 +347,30 @@ input:checked + .slider:before {
 .step {
     display: flex;
     width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: grey;
+
 }
 
 .step_type {
-    width: 35%;
-    flex-direction: column;
-    background-color: grey;
+    width: 50%;
 } 
 
-.psg {
-    background-image: url("images/notes_icon.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+.step_type img{
+    /* border: red 2px solid; */
+    width: 100%;
 }
 
 .step_info {
     padding: 2% 5%;
-    justify-content: left;
+    justify-content: center;
     font-size: 100%;
-    display: flex;
 }
 
 .vl {
-    border-left: 3px solid black;
-    margin: 0 10%;
+    border-left: 4px solid black;
+    margin: 5% 50%;
     height: 100px;
 }
 
