@@ -221,7 +221,7 @@ a {
 }
 
 #hidden {
-    padding: 1%;
+    padding: 3% 1%;
     display: none;
     color: black;
     font-size: 120%;
@@ -477,6 +477,15 @@ input:checked + .slider:before {
 
 .passage p {
     font-size: 120%;
+}
+
+.passage ul {
+    margin: 3%;
+    list-style-type: circle;
+}
+
+.passage li {
+    text-indent: 0;
 }
 
 .verse {
