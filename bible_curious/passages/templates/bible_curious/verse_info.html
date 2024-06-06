@@ -28,19 +28,125 @@
                 <img src="{% static 'images/storyline_icon.png' %}" alt="">
             </a>
         </div>
-        
         <div class="content">
             <h3>
                 <a href="/">&larr; Home</a>
-                
             </h3>
-            <h1>Verse Information</h1>
-            <h2>verse of the day</h2>
-            <div class="verse_of_the_week letters">
+            <!-- verse information -->
+            <h1>Verse Info</h1>
+            <!-- <hr class="letters"> -->
+            <div class="verse_info verse_letters">
+                <h2>Verse of the week</h2>
                 <p>
                     Cast all your anxieties on him because he cares for you.
                 </p>
-                <p class="ref">1 Peter 5:7 NIV</p>
+                <p>1 Peter 5:7 NIV</p>
+            </div>
+            <!-- explanation -->
+            <div class="sections verse_letters">
+                <label for="collapse1">
+                    <h3>&darr; explanation</h3>
+                </label>
+                <input type="checkbox" id="collapse1" style="display:none;">
+                <div id="hidden">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Ex corrupti harum aperiam excepturi hic minus ipsum quis 
+                architecto voluptas sapiente officia autem amet, dolore vel 
+                suscipit dicta cupiditate sit corporis?
+                </div>
+            </div>
+            <!-- sections of the bible -->
+            <h2>Sections of the Bible</h2>
+            <div class="sections law_box">
+                <label for="collapse2">
+                    <h3>LAW:</h3>
+                </label>
+                <input type="checkbox" id="collapse2" style="display:none;">
+                <p id="hidden">
+                    The Law books are the first books of the Bible and 
+                    are about the creation of the world, and the peoples 
+                    rebellion against God. Humanity didn’t trust God and so 
+                    their relationship with him and with creation is broken.
+                </p>
+            </div>
+            <div class="sections history_box">
+                <label for="collapse3">
+                    <h3>HISTORY:</h3>
+                </label>
+                <input type="checkbox" id="collapse3" style="display:none;">
+                <p id="hidden">
+                    The History Books cover a period of time when the nations 
+                    of Israel were established and ruled by judges and 
+                    then kings.
+                </p>
+            </div>
+            <div class="sections poetry_box">
+                <label for="collapse4">
+                    <h3>POETRY:</h3>
+                </label>
+                <input type="checkbox" id="collapse4" style="display:none;">
+                <p id="hidden">
+                    The Poetry books are about wisdom, through poems and 
+                    stories, giving insights on trusting God through 
+                    periods of sadness, joy, and teaching us about human 
+                    nature.
+                </p>
+            </div>
+            <div class="sections prophets_box">
+                <label for="collapse5">
+                    <h3>PROPHETS:</h3>
+                </label>
+                <input type="checkbox" id="collapse5" style="display:none;">
+                <p id="hidden">
+                    The Prophets were social critics who reminded the Jewish 
+                    people of God and his concern for the poor and the laws 
+                    and promises God made for his people.
+                </p>
+            </div>
+            <div class="sections gospels_box">
+                <label for="collapse6">
+                    <h3>GOSPELS:</h3>
+                </label>
+                <input type="checkbox" id="collapse6" style="display:none;">
+                <p id="hidden">
+                    The Gospels follow the life, death and resurrection of 
+                    Jesus. Each was written in a different perspective, and 
+                    has different themes.
+                </p>
+            </div>
+            <div class="sections church_box">
+                <label for="collapse7">
+                    <h3>THE CHURCH:</h3>
+                </label>
+                <input type="checkbox" id="collapse7" style="display:none;">
+                <p id="hidden">
+                    The book of Acts is about the history of the Church and 
+                    its establishment, and how the word of God spread to other 
+                    countries and places.
+                </p>
+            </div>
+            <div class="sections letters_box">
+                <label for="collapse8">
+                    <h3>LETTERS:</h3>
+                </label>
+                <input type="checkbox" id="collapse8" style="display:none;">
+                <p id="hidden">
+                    The Letters books are collections of letters written by 
+                    prophets (mostly a guy called Paul) who wrote to places 
+                    that needed to be reminded of God. It tells about how to 
+                    live our lives as Christians.
+                </p>
+            </div>
+            <div class="sections prophecy_box">
+                <label for="collapse9">
+                    <h3>REVELATION:</h3>
+                </label>
+                <input type="checkbox" id="collapse9" style="display:none;">
+                <p id="hidden">
+                    The Book of Revelation is written as an apocalyptic style 
+                    text of what's to come. It uses poetic and dramatic imagery 
+                    which can be interpreted many different ways.
+                </p>
             </div>
         </div>
     </body>

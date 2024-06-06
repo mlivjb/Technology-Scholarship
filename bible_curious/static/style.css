@@ -103,7 +103,7 @@ p {
 .content {
     padding: 5%;
     margin-bottom: 20%;
-    max-width: 600px;
+    max-width: 768;
     margin-left: auto;
     margin-right: auto;
 }
@@ -123,61 +123,152 @@ a {
 }
 
 .verse_of_the_week {
-    border-radius: 3%;
-    padding: 3%;
+    border-radius: 10px;
+    padding: 5%;
     margin: 0;
-    font-weight:bold;
-    color: black;
+    font-size: 110%;
 }
 
 .verse_of_the_week .ref {
-    font-weight:lighter;
+    font-size: 100%;
+    margin: 0;
 }
 
-.verse_of_the_week.letters {
+.letters_box {
     /* box-shadow: 0 0 15px 3px #e68932; */
     background-image: linear-gradient(to bottom right, #e68932, orange, white);
 }
 
-.verse_of_the_week.gospels {
+.gospels_box {
     /* box-shadow: 0 0 15px 3px #70634b; */
     background-image: linear-gradient(to bottom right, #70634b, #998a6d, white);
     color: white;
 }
 
-.verse_of_the_week.law {
+.law_box {
     /* box-shadow: 0 0 15px 3px #cf2f23; */
-    background-image: linear-gradient(to bottom right, #cf2f23, #dc5318, white);
+    background-image: linear-gradient(to bottom right, #cf2f23, #dc5318, #ecbfac);
+    color: white;
 }
 
-.verse_of_the_week.history {
+.history_box {
     /* box-shadow: 0 0 15px 3px #174ab0; */
-    background-image: linear-gradient(to bottom right, #174ab0, #2e62c9, white);
+    background-image: linear-gradient(to bottom right, #174ab0 30%, #537ed4, #799de6);
     color: white;
 }
 
-.verse_of_the_week.poetry {
+.poetry_box {
     /* box-shadow: 0 0 15px 3px #ed8cea; */
-    background-image: linear-gradient(to bottom right, #ed8cea, #f1b1ef, white);
+    background-image: linear-gradient(to bottom right, #ed8cea, #f5c2f4, white);
 }
 
-.verse_of_the_week.prophets {
+.prophets_box {
     /* box-shadow: 0 0 15px 3px #396641; */
-    background-image: linear-gradient(to bottom right, #396641, #55875e, white);
+    background-image: linear-gradient(to bottom right, #396641, #55875e, #abd6b2);
     color: white;
 }
 
-.verse_of_the_week.church {
+.church_box {
     /* box-shadow: 0 0 15px 3px #594b70; */
-    background-image: linear-gradient(to bottom right, #594b70, #72628b, white);
+    background-image: linear-gradient(to bottom right, #594b70 30%, #8676a0, white);
     color: white;
 }
 
-.verse_of_the_week.prophecy {
+.prophecy_box {
     /* box-shadow: 0 0 15px 3px #ed8cea; */
     background-image: linear-gradient(to bottom right, #f0e556, #f8f3a8, white);
 }
 
+.verse_info{
+    padding: 0 3%;
+    margin: 0;
+}
+
+.verse_law {
+    border-left: 5px solid #cf2f23;
+}
+
+.verse_history {
+    border-left: 5px solid #174ab0;
+}
+
+.verse_poetry {
+    border-left: 5px solid #ed8cea;
+}
+
+.verse_prophets {
+    border-left: 5px solid #396641;
+}
+
+.verse_gospels {
+    border-left: 5px solid #70634b;
+}
+
+.verse_church {
+    border-left: 5px solid #594b70;
+}
+
+.verse_letters {
+    border-left: 5px solid #e89817;
+}
+
+.verse_prophecy {
+    border-left: 5px solid #f0e556;
+}
+
+.verse_info h2{
+    padding: 0;
+}
+
+#hidden {
+    padding: 1%;
+    display: none;
+    color: black;
+    font-size: 120%;
+}
+
+:checked + #hidden {
+    display: block;
+}
+
+.history_box #hidden {
+    color: white;
+}
+
+.prophets_box #hidden {
+    color: white;
+}
+
+.gospels_box #hidden{
+    color: white;
+}
+
+.church_box #hidden {
+    color: white;
+}
+
+.law_box #hidden {
+    color: white;
+}
+
+.sections {
+    padding: 1% 3%;
+    width: 90;
+    justify-content: center;
+    display: block;
+    border-radius: 4px;
+    margin: 5% 0;
+    background-color: rgb(241, 241, 241);
+}
+
+.sections h3 {
+    font-weight: bolder;
+    font-size: 130%;
+}
+
+.sections p {
+    font-size: 120%;
+}
 
 .current_stories_scroll {
     overflow: auto;
@@ -297,7 +388,7 @@ input:checked + .slider:before {
 .story_block {
     width: 80%;
     display: flex;
-    background-color: grey;
+    background-color: rgb(166, 166, 166);
     padding: 2% 10%;
     border-radius: 10px;
     margin: 10% 0;
@@ -327,7 +418,7 @@ input:checked + .slider:before {
 }
 
 .collection_block {
-    background-color: grey;
+    background-color: rgb(166, 166, 166);
     padding: 2% 10%;
     border-radius: 10px;
     margin: 10% 0; 
@@ -349,8 +440,14 @@ input:checked + .slider:before {
     width: 100%;
     border-radius: 10px;
     justify-content: center;
-    background-color: grey;
+    background-color: rgb(166, 166, 166);
+}
 
+.step h3 {
+    text-decoration: none;
+    font-size: 130%;
+    font-weight: normal;
+    padding: 0;
 }
 
 .step_type {
