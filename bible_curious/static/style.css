@@ -23,7 +23,7 @@ p {
 
 .menubar {
     margin: 0;
-    background-color: #1b344b;
+    background-color: #afc7d4;
     bottom: 0;
     width: 100%;
     overflow: hidden;
@@ -60,7 +60,7 @@ p {
 
 .menubar .active {
     border-radius:50%;
-    background-color: #1b344b;
+    background-color: #afc7d4;
     z-index: 1;
     width: 25%;
     height: 13%;
