@@ -4,8 +4,13 @@ body {
     background-color: white;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 h1 {
-    font-size: 300%;
+    font-size: 250%;
+    display: flex;
 }
 
 h2 {
@@ -18,7 +23,7 @@ p {
 
 .menubar {
     margin: 0;
-    background-color: #a8c7f0;
+    background-color: #1b344b;
     bottom: 0;
     width: 100%;
     overflow: hidden;
@@ -55,7 +60,7 @@ p {
 
 .menubar .active {
     border-radius:50%;
-    background-color: #a8c7f0;
+    background-color: #1b344b;
     z-index: 1;
     width: 25%;
     height: 13%;
@@ -106,6 +111,8 @@ p {
     max-width: 768;
     margin-left: auto;
     margin-right: auto;
+    overflow-y: scroll; /* Add the ability to scroll */
+    color: #1b344b;
 }
 
 a {
@@ -124,7 +131,7 @@ a {
 
 .verse_of_the_week {
     border-radius: 10px;
-    padding: 5%;
+    padding: 0 5%;
     margin: 0;
     font-size: 110%;
 }
@@ -186,38 +193,42 @@ a {
 
 .verse_law {
     border-left: 5px solid #cf2f23;
+    border-radius: 10px;
 }
 
 .verse_history {
     border-left: 5px solid #174ab0;
+    border-radius: 10px;
 }
 
 .verse_poetry {
     border-left: 5px solid #ed8cea;
+    border-radius: 10px;
 }
 
 .verse_prophets {
     border-left: 5px solid #396641;
+    border-radius: 10px;
 }
 
 .verse_gospels {
     border-left: 5px solid #70634b;
+    border-radius: 10px;
 }
 
 .verse_church {
     border-left: 5px solid #594b70;
+    border-radius: 10px;
 }
 
 .verse_letters {
     border-left: 5px solid #e89817;
+    border-radius: 10px;
 }
 
 .verse_prophecy {
     border-left: 5px solid #f0e556;
-}
-
-.verse_info h2{
-    padding: 0;
+    border-radius: 10px;
 }
 
 #hidden {
@@ -229,6 +240,21 @@ a {
 
 :checked + #hidden {
     display: block;
+}
+
+
+.shake {
+    animation: tilt-shaking 1s;
+    animation-fill-mode: backwards;
+
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .history_box #hidden {
@@ -258,7 +284,7 @@ a {
     display: block;
     border-radius: 4px;
     margin: 5% 0;
-    background-color: rgb(241, 241, 241);
+    background-color: #fbf5c5;
 }
 
 .sections h3 {
@@ -293,7 +319,7 @@ a {
     padding: 15%;
     height: 80%;
     display: block;
-    background-color: #ab739a;
+    background-color: #afc7d4;
     border-radius: 5px;
     font-size: 200%;
     background-image: url(collections/moses.png);
@@ -306,7 +332,7 @@ a {
     padding: 5%;
     text-align: center;
     display: block;
-    background-color: #ab739a;
+    background-color: #8db9b4;
     border-radius: 5px;
     font-size: 120%;
 }
@@ -315,8 +341,9 @@ a {
 .settings .toggle {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 48px;
+    height: 25px;
+    margin: 0 0 0 5%;
 }
 
 .settings .toggle input {
@@ -332,7 +359,7 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: red;
+    background-color: #afc7d4;
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
@@ -340,17 +367,17 @@ a {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
     -webkit-transition: .0.4;
     transition: 0.4;
 }
 
 input:checked + .slider {
-    background-color: blue;
+    background-color: #1b344b;
 }
 
 input:focus + .slider {
@@ -358,9 +385,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
 }
 
 .slider.round {
@@ -388,7 +415,7 @@ input:checked + .slider:before {
 .story_block {
     width: 80%;
     display: flex;
-    background-color: rgb(166, 166, 166);
+    background-color: #8db9b4;
     padding: 2% 10%;
     border-radius: 10px;
     margin: 10% 0;
@@ -400,12 +427,12 @@ input:checked + .slider:before {
 .story_block a {
     text-align:right;
     font-size: 150%;
-    color: white;
+    color: #1b344b;
     padding-left: 30%;
 }
 
 .story_block a:hover {
-    color: black;
+    color: white;
     transition: 0.5s ease;
 }
 
@@ -418,7 +445,7 @@ input:checked + .slider:before {
 }
 
 .collection_block {
-    background-color: rgb(166, 166, 166);
+    background-color: #1b344b;
     padding: 2% 10%;
     border-radius: 10px;
     margin: 10% 0; 
@@ -431,7 +458,7 @@ input:checked + .slider:before {
 }
 
 .collection_block a:hover {
-    color: black;
+    color: #1b344b;
     transition: 0.5s ease;
 }
 
@@ -440,7 +467,8 @@ input:checked + .slider:before {
     width: 100%;
     border-radius: 10px;
     justify-content: center;
-    background-color: rgb(166, 166, 166);
+    background-color: #afc7d4;
+    color: #1b344b;
 }
 
 .step h3 {
@@ -466,7 +494,7 @@ input:checked + .slider:before {
 }
 
 .vl {
-    border-left: 4px solid black;
+    border-left: 4px solid #1b344b;
     margin: 5% 50%;
     height: 100px;
 }
@@ -489,8 +517,8 @@ input:checked + .slider:before {
 }
 
 .verse {
-    background-color: rgba(78, 78, 78, 0.288);
-    color: black;
+    background-color: #fbf5c5;
+    color: #1b344b;
     padding: 3%;
     border-radius: 10px;
 }

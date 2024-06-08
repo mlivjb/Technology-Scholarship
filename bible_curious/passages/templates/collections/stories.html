@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Collections - Story</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-    </head>
-    <body>
-        <!-- MENUBAR -->
-        <div class="menubar">
-            <a href="/maps">
-                <img src="{% static 'images/maps_icon.png' %}" alt="">
-            </a>
-            <a href="/notes">
-                <img src="{% static 'images/notes_icon.png' %}" alt="">
-            </a>
-            <a href="/">
-                <img src="{% static 'images/Home_icon.png' %}" alt="">
-            </a>
-            <div class="active four">
-                <a href="collections"></a>
-            </div>
-            <!-- Filler -->
-            <a href="#"></a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Story</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <!-- MENUBAR -->
+    <div class="menubar">
+        <a href="/maps">
+            <img src="{% static 'images/maps_icon.png' %}" alt="">
+        </a>
+        <a href="/notes">
+            <img src="{% static 'images/notes_icon.png' %}" alt="">
+        </a>
+        <a href="/">
+            <img src="{% static 'images/Home_icon.png' %}" alt="">
+        </a>
+        <div class="active four">
+            <a href="collections"></a>
+        </div>
+        <!-- Filler -->
+        <a href="#"></a>
+        <a href="leaders_of_the_bible/moses">
+            <img src="{% static 'images/storyline_icon.png' %}" alt="">
+        </a>
+    </div>
+    <div class="content">
+        <h3>
+            <a href="/collections">Collections</a> &rarr; Stories
+        </h3>
+        <h1>Leaders in the Bible</h1>
+        <div class="story_block">
             <a href="leaders_of_the_bible/moses">
-                <img src="{% static 'images/storyline_icon.png' %}" alt="">
+                <h2>Moses</h2>
             </a>
         </div>
-        <div class="content">
-            <h3>
-                <a href="/collections">Collections</a> &rarr; Stories
-            </h3>
-            <h1>Leaders in the Bible</h1>
-            <div class="story_block">
-                <a href="leaders_of_the_bible/moses">
-                    <h2>Moses</h2>
-                </a>
-            </div>
-            <div class="story_block shake">
+        <div class="story_block shake">
                 <a href="#Abraham">
                     <h2>Abraham</h2>
                 </a>
-            </div>
-            <div class="story_block shake">
-                <a href="#Jacob">
-                    <h2>Jacob</h2>
-                </a>
-            </div>
-            <div class="story_block">
-                <a href="#Joshua">
-                    <h2>Joshua</h2>
-                </a>
-            </div>
-            <div class="story_block">
-                <a href="#Peter">
-                    <h2>Peter</h2>
-                </a>
-            </div>
+            </label>
         </div>
-    </body>
+        <div class="story_block shake">
+            <a href="#Jacob">
+                <h2>Jacob</h2>
+            </a>
+        </div>
+        <div class="story_block">
+            <a href="#Joshua">
+                <h2>Joshua</h2>
+            </a>
+        </div>
+        <div class="story_block">
+            <a href="#Peter">
+                <h2>Peter</h2>
+            </a>
+        </div>
+    </div>
+</body>
+
 </html>
