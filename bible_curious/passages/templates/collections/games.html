@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question + question name</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <!-- MENUBAR -->
+    <div class="menubar">
+        <a href="/maps">
+            <img src="{% static 'images/maps_icon.png' %}" alt="">
+        </a>
+        <a href="/notes">
+            <img src="{% static 'images/notes_icon.png' %}" alt="">
+        </a>
+        <a href="/">
+            <img src="{% static 'images/Home_icon.png' %}" alt="">
+        </a>
+        <a href="/collections">
+            <img src="{% static 'images/collections_icon.png' %}" alt="">
+        </a>
+        <!-- Filler -->
+        <a href="#"></a>
+        <div class="active five">
+            <a href="leaders_of_the_bible/moses"></a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3><a href="../moses">&larr; storyline</a></h3>
+        <!-- doesn't work currently -->
+        <div><iframe src='https://puzzel.org/en/crossword/embed?p=-NzGQgWg5rwlRXUHa66f' width='90%' height="800px"
+                frameborder='0'></iframe></div>
+    </div>
+</body>
+
+</html>
