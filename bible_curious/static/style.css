@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     /* background-color: rgb(224, 224, 224); */
     background-color: #fff;
+    line-height: 1.5;
+    font-family: "Karla", sans-serif;
+}
+
+p {
+    word-spacing: 0.2em;
 }
 
 ::-webkit-scrollbar {
@@ -50,7 +58,7 @@ p {
     width: 100%;
 }
 
-.active img{
+.active img {
     display: flex;
     width: 570%;
     z-index: 2;
@@ -60,7 +68,7 @@ p {
 }
 
 .menubar .active {
-    border-radius:50%;
+    border-radius: 50%;
     background-color: #afc7d4;
     z-index: 1;
     width: 25%;
@@ -85,14 +93,14 @@ p {
 }
 
 .active.three {
-    left:37%;
+    left: 37%;
     background-image: url("images/Home_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .active.four {
-    left:57%;
+    left: 57%;
     background-image: url("images/collections_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -112,7 +120,8 @@ p {
     max-width: 768;
     margin-left: auto;
     margin-right: auto;
-    overflow-y: scroll; /* Add the ability to scroll */
+    overflow-y: scroll;
+    /* Add the ability to scroll */
     color: #08415c;
 }
 
@@ -187,7 +196,7 @@ a {
     background-image: linear-gradient(to bottom right, #f0e556, #f8f3a8, white);
 }
 
-.verse_info{
+.verse_info {
     padding: 0 3%;
     margin: 0;
 }
@@ -239,7 +248,7 @@ a {
     font-size: 120%;
 }
 
-:checked + #hidden {
+:checked+#hidden {
     display: block;
 }
 
@@ -251,11 +260,25 @@ a {
 }
 
 @keyframes tilt-shaking {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .history_box #hidden {
@@ -266,7 +289,7 @@ a {
     color: white;
 }
 
-.gospels_box #hidden{
+.gospels_box #hidden {
     color: white;
 }
 
@@ -306,7 +329,7 @@ a {
     height: 20%;
 }
 
-.current_story_block{
+.current_story_block {
     display: inline-block;
     overflow: hidden;
     margin: 2%;
@@ -377,15 +400,15 @@ a {
     transition: 0.4;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #08415c;
 }
 
-input:focus + .slider {
+input:focus+.slider {
     box-shadow: 0 0 1px white;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     -webkit-transform: translateX(22px);
     -ms-transform: translateX(22px);
     transform: translateX(22px);
@@ -426,7 +449,7 @@ input:checked + .slider:before {
 }
 
 .story_block a {
-    text-align:right;
+    text-align: right;
     font-size: 150%;
     color: #08415c;
     padding-left: 30%;
@@ -450,7 +473,7 @@ input:checked + .slider:before {
     background-color: #08415c;
     padding: 2% 10%;
     border-radius: 10px;
-    margin: 10% 0; 
+    margin: 10% 0;
 }
 
 .collection_block a {
@@ -482,9 +505,9 @@ input:checked + .slider:before {
 
 .step_type {
     width: 50%;
-} 
+}
 
-.step_type img{
+.step_type img {
     /* border: red 2px solid; */
     width: 100%;
 }
@@ -501,7 +524,8 @@ input:checked + .slider:before {
     height: 100px;
 }
 
-.passage, .question {
+.passage,
+.question {
     display: inline-block;
 }
 
