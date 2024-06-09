@@ -1,7 +1,8 @@
 body {
     margin: 0;
+    padding: 0;
     /* background-color: rgb(224, 224, 224); */
-    background-color: white;
+    background-color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -112,12 +113,12 @@ p {
     margin-left: auto;
     margin-right: auto;
     overflow-y: scroll; /* Add the ability to scroll */
-    color: #1b344b;
+    color: #08415c;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #08415c;
 }
 
 .icon_header {
@@ -234,7 +235,7 @@ a {
 #hidden {
     padding: 3% 1%;
     display: none;
-    color: black;
+    color: #08415c;
     font-size: 120%;
 }
 
@@ -282,7 +283,7 @@ a {
     width: 90;
     justify-content: center;
     display: block;
-    border-radius: 4px;
+    border-radius: 10px;
     margin: 5% 0;
     background-color: #fbf5c5;
 }
@@ -309,18 +310,18 @@ a {
     display: inline-block;
     overflow: hidden;
     margin: 2%;
-    width: 50%;
+    width: 55%;
 }
 
 .c_s_story {
-    text-align: center;
+    text-align: right;
     justify-content: center;
     margin-bottom: 5%;
     padding: 15%;
     height: 80%;
     display: block;
     background-color: #afc7d4;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 200%;
     background-image: url(collections/moses.png);
     background-size: contain;
@@ -333,7 +334,7 @@ a {
     text-align: center;
     display: block;
     background-color: #8db9b4;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 120%;
 }
 
@@ -377,7 +378,7 @@ a {
 }
 
 input:checked + .slider {
-    background-color: #1b344b;
+    background-color: #08415c;
 }
 
 input:focus + .slider {
@@ -427,8 +428,9 @@ input:checked + .slider:before {
 .story_block a {
     text-align:right;
     font-size: 150%;
-    color: #1b344b;
+    color: #08415c;
     padding-left: 30%;
+    text-decoration: none;
 }
 
 .story_block a:hover {
@@ -445,7 +447,7 @@ input:checked + .slider:before {
 }
 
 .collection_block {
-    background-color: #1b344b;
+    background-color: #08415c;
     padding: 2% 10%;
     border-radius: 10px;
     margin: 10% 0; 
@@ -458,7 +460,7 @@ input:checked + .slider:before {
 }
 
 .collection_block a:hover {
-    color: #1b344b;
+    color: #afc7d4;
     transition: 0.5s ease;
 }
 
@@ -468,7 +470,7 @@ input:checked + .slider:before {
     border-radius: 10px;
     justify-content: center;
     background-color: #afc7d4;
-    color: #1b344b;
+    color: #08415c;
 }
 
 .step h3 {
@@ -494,7 +496,7 @@ input:checked + .slider:before {
 }
 
 .vl {
-    border-left: 4px solid #1b344b;
+    border-left: 4px solid #08415c;
     margin: 5% 50%;
     height: 100px;
 }
@@ -518,7 +520,7 @@ input:checked + .slider:before {
 
 .verse {
     background-color: #fbf5c5;
-    color: #1b344b;
+    color: #08415c;
     padding: 3%;
     border-radius: 10px;
 }
