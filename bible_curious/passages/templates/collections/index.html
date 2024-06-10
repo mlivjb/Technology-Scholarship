@@ -31,31 +31,14 @@
         </div>
         <div class="content">
             <h1>Collections</h1>
+            {% for collection in collections %}
             <div class="collection_block">
-                <a href="leaders_of_the_bible">
-                    <h2>Leaders of the Bible</h2>
+                <a href="{{ collection.href }}">
+                    <h2>{{collection.name}}</h2>
                 </a>
             </div>
-            <div class="collection_block shake">
-                <a href="#">
-                    <h2>Women in the Bible</h2>
-                </a>
-            </div>
-            <div class="collection_block shake">
-                <a href="#">
-                    <h2>Jesus' Life</h2>
-                </a>
-            </div>
-            <div class="collection_block shake">
-                <a href="#">
-                    <h2>Laws, Rules and Customs</h2>
-                </a>
-            </div>
-            <div class="collection_block shake">
-                <a href="#">
-                    <h2>Prophets and Mission</h2>
-                </a>
-            </div>
+            {% endfor %}
+            
         </div>
     </body>
 </html>
