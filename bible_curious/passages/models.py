@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 class Collection(models.Model):
@@ -12,7 +12,9 @@ class Collection(models.Model):
     def calculate_href(self):
         return self.name.replace(" ", "_").lower()
 
+
 class Story(models.Model):
+    """ Defintion of shape of model for stories under collection."""
     name = models.CharField(max_length=50)
     # Delete everything under the key first
     collection = models.ForeignKey(Collection, on_delete=models.RESTRICT)
@@ -22,8 +24,32 @@ class Story(models.Model):
     
     def calculate_href(self):
         return f"{self.collection.name}/{self.name}".replace(" ", "_").lower()
-    
 
+
+class Step(models.Model):
+    """ Defintion of shape of model for steps under stories under collection."""
+    class Step_types(models.TextChoices):
+        PASSAGE = "P", _('Passage')
+        QUESTION = "Q", _('Question')
+        GAME = "G", _('Game')
+
+    name = models.CharField(max_length=50)
+    type = models.CharField(
+        max_length=1,
+        choices = Step_types.choices,
+        default = Step_types.PASSAGE
+    )
+    # Delete everything under the key first
+    story = models.ForeignKey(Story, on_delete=models.RESTRICT)
+    step_number = models.IntegerField(
+        default=1
+    )
+    
+    def  __str__(self) -> str:
+        return f"({self.step_number}) {self.name} ({self.type}) "
+    
+    def calculate_href(self):
+        return f"{self.story.name}/{self.name}".replace(" ", "_").lower()
 
     
     
