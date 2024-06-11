@@ -1,21 +1,38 @@
 from django.shortcuts import HttpResponse, render
 
-from .models import Collection
+from .models import Collection, Story
 
-def collection_page(page_name):
-    def response(request):
+
+def index(request):
+    context = {
+        "collections": [
+            {
+                "name": collection.name, 
+                "href": collection.calculate_href(),
+            }
+            for collection 
+            in Collection.objects.order_by("id")
+        ],
+    }
+    return render(request, f"collections/index.html", context)
+
+def stories(collection_name):
+    # look up collection object with a matching name
+    collections_stories = Story.objects.filter(collection__name=collection_name)
+    def eh(request):
         context = {
-            "collections": [
+            "collection_name": collection_name,
+            "stories": [
                 {
-                    "name": collection.name, 
-                    "href": collection.calculate_href(),
+                    "name": story.name, 
+                    "href": story.calculate_href()
                 }
-                for collection 
-                in Collection.objects.order_by("id")
+                for story 
+                in collections_stories.order_by("id")
             ],
         }
-        return render(request, f"collections/{page_name}.html", context)
-    return response
+        return render(request, f"collections/stories.html", context)
+    return eh
 
 
 

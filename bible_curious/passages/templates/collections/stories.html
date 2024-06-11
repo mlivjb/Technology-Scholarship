@@ -34,33 +34,16 @@
         <h3>
             <a href="/collections">Collections</a> &rarr; Leaders of the Bible
         </h3>
-        <h1>Leaders of the Bible</h1>
+        <h1>{{collection_name}}</h1>
+        
+        {% for story in stories %}
         <div class="story_block">
-            <a href="leaders_of_the_bible/moses">
-                <h2>Moses</h2>
+            <a href="{{story.href}}">
+                <h2>{{story.name}}</h2>
             </a>
         </div>
-        <div class="story_block shake">
-                <a href="#Abraham">
-                    <h2>Abraham</h2>
-                </a>
-            </label>
-        </div>
-        <div class="story_block shake">
-            <a href="#Jacob">
-                <h2>Jacob</h2>
-            </a>
-        </div>
-        <div class="story_block">
-            <a href="#Joshua">
-                <h2>Joshua</h2>
-            </a>
-        </div>
-        <div class="story_block">
-            <a href="#Peter">
-                <h2>Peter</h2>
-            </a>
-        </div>
+        {% endfor %}
+
     </div>
 </body>
 
