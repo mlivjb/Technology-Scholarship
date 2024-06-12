@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-from .models import Collection
+from .models import Collection, Story
 
 
 urlpatterns = [
@@ -12,6 +12,12 @@ urlpatterns = [
     name=collection.name)
     for collection 
     in Collection.objects.order_by("id")
+] + [
+    path(story.calculate_href(), 
+    views.stories(story.name), 
+    name=story.name)
+    for story 
+    in Story.objects.order_by("id")
 ]
 
     

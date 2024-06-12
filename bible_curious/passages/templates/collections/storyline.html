@@ -33,12 +33,14 @@
                 <a href="../leaders_of_the_bible">Leaders of the Bible</a>
                 &rarr; Moses' storyline
             </h3>
-            <h1>Moses</h1>
-            <!-- passages -->
-            <a href="moses/1" class="step">
+            <h1>{{story_name}}</h1>
+            
+            <!-- steps -->
+            {% for step in steps %}
+            <a href="{{step.href}}" class="step">
                 <div class="step_info">
-                    <h2>Question</h2>
-                    <h3>Who is Moses?</h3>
+                    <h2>{{step.type}}</h2>
+                    <h3>{{step.name}}</h3>
                     <input type="checkbox">
                 </div>
                 <div class="step_type">
@@ -46,7 +48,9 @@
                 </div>
             </a>
             <div class="vl"></div>
+            {% endfor %}
 
+<!-- 
             <a href="moses/2" class="step">
                 <div class="step_type">
                     <img src="{% static 'images/passage_icon.png' %}" alt="">
@@ -69,7 +73,7 @@
                     <img src="{% static 'images/games_icon.png' %}" alt="">
                 </div>
                 
-            </a>
+            </a> -->
 
 
         </div>

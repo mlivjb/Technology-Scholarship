@@ -14,7 +14,7 @@ class Collection(models.Model):
 
 
 class Story(models.Model):
-    """ Defintion of shape of model for stories under collection."""
+    """ Definition of shape of model for stories under collection."""
     name = models.CharField(max_length=50)
     # Delete everything under the key first
     collection = models.ForeignKey(Collection, on_delete=models.RESTRICT)
@@ -27,7 +27,7 @@ class Story(models.Model):
 
 
 class Step(models.Model):
-    """ Defintion of shape of model for steps under stories under collection."""
+    """ Definition of shape of model for steps under stories under collection."""
     class Step_types(models.TextChoices):
         PASSAGE = "P", _('Passage')
         QUESTION = "Q", _('Question')
@@ -46,7 +46,7 @@ class Step(models.Model):
     )
     
     def  __str__(self) -> str:
-        return f"({self.step_number}) {self.name} ({self.type}) "
+        return f"({self.step_number}) {self.name} ({self.type})"
     
     def calculate_href(self):
         return f"{self.story.name}/{self.name}".replace(" ", "_").lower()

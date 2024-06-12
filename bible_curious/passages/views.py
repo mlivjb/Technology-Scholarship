@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse, render
 
-from .models import Collection, Story
+from .models import Collection, Story, Step
 
 
 def index(request):
@@ -19,7 +19,7 @@ def index(request):
 def stories(collection_name):
     # look up collection object with a matching name
     collections_stories = Story.objects.filter(collection__name=collection_name)
-    def eh(request):
+    def stories_href(request):
         context = {
             "collection_name": collection_name,
             "stories": [
@@ -32,7 +32,28 @@ def stories(collection_name):
             ],
         }
         return render(request, f"collections/stories.html", context)
-    return eh
+    return stories_href
+
+def steps(collection_name, story_name): 
+    # look up stories object with a matching name
+    stories_steps = Step.objects.filter(story__name=story_name)
+    def steps_href(request):
+        context = {
+            "collection_name": collection_name,
+            "story_name": story_name,
+            "steps": [
+                {
+                    "name": step.name, 
+                    "type": step.type,
+                    "step_number": step.step_number,
+                    "href": step.calculate_href()
+                }
+                for step 
+                in stories_steps.order_by("id")
+            ],
+        }
+        return render(request, f"collections/storyline.html", context)
+    return steps_href
 
 
 
