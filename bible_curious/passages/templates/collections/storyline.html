@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% static 'images' as image_path %}
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -30,8 +31,8 @@
         </div>
         <div class="content">
             <h3>
-                <a href="../leaders_of_the_bible">Leaders of the Bible</a>
-                &rarr; Moses' storyline
+                <a href="../{{collection_href}}">{{collection_name}}</a>
+                &rarr; {{story_name}}'s storyline
             </h3>
             <h1>{{story_name}}</h1>
             
@@ -44,36 +45,11 @@
                     <input type="checkbox">
                 </div>
                 <div class="step_type">
-                    <img src="{% static 'images/question_icon.png' %}" alt="">
+                    <img src="{{image_path}}/{{step.type}}_icon.png" alt="">
                 </div>
             </a>
             <div class="vl"></div>
             {% endfor %}
-
-<!-- 
-            <a href="moses/2" class="step">
-                <div class="step_type">
-                    <img src="{% static 'images/passage_icon.png' %}" alt="">
-                </div>
-                <div class="step_info">
-                    <h2>Passage</h2>
-                    <h3>Moses Flees to Midian</h3>
-                    <input type="checkbox">
-                </div>
-            </a>
-            <div class="vl"></div>
-
-            <a href="https://puzzel.org/en/crossword/play?p=-NzGQgWg5rwlRXUHa66f" class="step">
-                <div class="step_info">
-                    <h2>Crossword</h2>
-                    <h3>Moses Origin</h3>
-                    <input type="checkbox">
-                </div>
-                <div class="step_type">
-                    <img src="{% static 'images/games_icon.png' %}" alt="">
-                </div>
-                
-            </a> -->
 
 
         </div>

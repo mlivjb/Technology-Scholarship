@@ -34,27 +34,40 @@ def stories(collection_name):
         return render(request, f"collections/stories.html", context)
     return stories_href
 
-def steps(collection_name, story_name): 
+def storyline(story_name): 
     # look up stories object with a matching name
     stories_steps = Step.objects.filter(story__name=story_name)
     def steps_href(request):
         context = {
-            "collection_name": collection_name,
+            "collection_name": stories_steps[0].story.collection.name,
+            "collection_href": stories_steps[0].story.collection.calculate_href(),
             "story_name": story_name,
             "steps": [
                 {
                     "name": step.name, 
-                    "type": step.type,
+                    "type": step.Step_types(step.type).label,
                     "step_number": step.step_number,
                     "href": step.calculate_href()
                 }
                 for step 
-                in stories_steps.order_by("id")
+                in stories_steps.order_by("step_number")
             ],
         }
         return render(request, f"collections/storyline.html", context)
     return steps_href
 
+def step(story_name, num): 
+    # look up stories object with a matching name
+    the_step = Step.objects.filter(step_number = num).filter(story__name = story_name).first()
+    def step_href(request):
+        context = {
+            "collection_name": the_step.story.collection.name,
+            "collection_href": the_step.story.collection.calculate_href(),
+            "story_name": story_name,
+            "step_number": the_step.step_number
+        }
+        return render(request, f"collections/{story_name}/{num}.html", context)
+    return step_href
 
 
 

@@ -28,7 +28,6 @@ h1 {
 
 h2 {
     font-size: 180%;
-    color: var(--p-text);
 }
 
 .menubar {
@@ -491,15 +490,17 @@ input:checked+.slider:before {
     margin: 10% 0;
 }
 
-.collection_block a {
+.collection_block h2{
     color: white;
-    text-align: center;
-    font-size: 120%;
 }
 
-.collection_block a:hover {
-    color: var(--step);
-    transition: 0.5s ease;
+.story_block h2 {
+    color: var(--collection);
+}
+
+.collection_block a {
+    text-align: center;
+    font-size: 120%;
 }
 
 .step {
