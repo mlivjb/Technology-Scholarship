@@ -13,6 +13,7 @@ urlpatterns = [
     for collection 
     in Collection.objects.order_by("id")
 ] + [
+    # calculate story path
     path(story.calculate_href(), 
     views.storyline(story.name), 
     name=story.name)

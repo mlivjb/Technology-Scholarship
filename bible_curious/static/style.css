@@ -343,7 +343,7 @@ a {
 
 .current_story_block {
     display: inline-block;
-    overflow: hidden;
+    overflow: none;
     margin: 2%;
     width: 55%;
 }
@@ -362,6 +362,7 @@ a {
     background-image: url(collections/moses.png);
     background-size: contain;
     background-repeat: no-repeat;
+    box-shadow: var(--shadow) 3px 4px 7px 0;
 }
 
 .c_s_collection {
@@ -373,6 +374,7 @@ a {
     color: var(--verse-clr);
     border-radius: 10px;
     font-size: 120%;
+    box-shadow: var(--shadow) 3px 4px 7px 0;
 }
 
 
@@ -459,6 +461,7 @@ input:checked+.slider:before {
     margin: 10% 0;
     background-image: url(collections/moses.png);
     background-size: contain;
+    box-shadow: var(--shadow) 3px 4px 7px 0;
     background-repeat: no-repeat;
 }
 
@@ -487,6 +490,7 @@ input:checked+.slider:before {
     background-color: var(--collection);
     padding: 2% 10%;
     border-radius: 10px;
+    box-shadow: var(--shadow) 3px 4px 7px 0;
     margin: 10% 0;
 }
 
@@ -509,18 +513,19 @@ input:checked+.slider:before {
     border-radius: 10px;
     justify-content: center;
     background-color: var(--step);
-    color: var(--p-text);
+    color: var(--step-clr);
+    box-shadow: var(--shadow) 3px 4px 7px 0;
 }
 
 .step h3 {
     text-decoration: none;
     font-size: 130%;
-    font-weight: normal;
+    font-weight: bold;
     padding: 0;
 }
 
 .step_type {
-    width: 50%;
+    width: 60%;
 }
 
 .step_type img {
@@ -531,11 +536,11 @@ input:checked+.slider:before {
 .step_info {
     padding: 2% 5%;
     justify-content: center;
-    font-size: 100%;
+    font-size: 110%;
 }
 
 .vl {
-    border-left: 4px solid var(--p-text);
+    border-left: 4px solid var(--step);
     margin: 5% 50%;
     height: 100px;
 }
@@ -585,19 +590,22 @@ img.profile {
     --step: #afc7d4;
     --verse: #f7efae;
     --verse-clr: #08415c;
-
+    --step-clr: #08415c;
+    --shadow: #606d74;
 }
 
 /* darkmode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #08415c;
+        --background: #152b35;
         --p-text: #ededed;
-        --menubar-clr: #0f6f9c;
-        --collection: #0f6f9c;
+        --menubar-clr: #8db9b4;
+        --collection: #08415c;
         --story: #8db9b4;
-        --step: #afc7d4;
+        --step: #95bed4;
         --verse: #ece085;
         --verse-clr: #08415c;
+        --step-clr: #08415c;
+        --shadow: #557391;
     }
 }
