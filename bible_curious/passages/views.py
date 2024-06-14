@@ -46,6 +46,7 @@ def storyline(story_name):
                 {
                     "name": step.name, 
                     "type": step.Step_types(step.type).label,
+                    "image": step.Step_types(step.type).label.lower(),
                     "step_number": step.step_number,
                     "href": step.calculate_href()
                 }

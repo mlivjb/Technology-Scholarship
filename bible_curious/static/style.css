@@ -114,7 +114,7 @@ h2 {
     max-width: 768%;
     margin-left: auto;
     margin-right: auto;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     /* Add the ability to scroll */
     color: var(--p-text);
 }
