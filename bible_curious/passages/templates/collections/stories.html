@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections - Story</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-
-<body>
-    <!-- MENUBAR -->
-    <div class="menubar">
-        <a href="/maps">
-            <img src="{% static 'images/maps_icon.png' %}" alt="">
-        </a>
-        <a href="/notes">
-            <img src="{% static 'images/notes_icon.png' %}" alt="">
-        </a>
-        <a href="/">
-            <img src="{% static 'images/Home_icon.png' %}" alt="">
-        </a>
-        <div class="active four">
-            <a href="collections"></a>
-        </div>
-        <!-- Filler -->
-        <a href="#"></a>
-        <a href="leaders_of_the_bible/moses">
-            <img src="{% static 'images/storyline_icon.png' %}" alt="">
-        </a>
-    </div>
-    <div class="content">
-        <h3>
-            <a href="/collections">Collections</a> &rarr; Leaders of the Bible
-        </h3>
-        <h1>{{collection_name}}</h1>
-        
-        <!-- stories -->
-        {% for story in stories %}
-        <div class="story_block">
-            <a href="{{story.href}}">
-                <h2>{{story.name}}</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Collections - Story</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <!-- MENUBAR -->
+        <div class="menubar">
+            <a href="/maps">
+                <img src="{% static 'images/maps_icon.png' %}" alt="">
+            </a>
+            <a href="/notes">
+                <img src="{% static 'images/notes_icon.png' %}" alt="">
+            </a>
+            <a href="/">
+                <img src="{% static 'images/Home_icon.png' %}" alt="">
+            </a>
+            <a href="./">
+                <div class="active four"></div>
+            </a>
+            <a href="leaders_of_the_bible/moses">
+                <img src="{% static 'images/storyline_icon.png' %}" alt="">
             </a>
         </div>
-        {% endfor %}
-
-    </div>
-</body>
-
+        <div class="content">
+            <h3>
+                <a href="/collections">&larr; Collections</a>
+            </h3>
+            <h1>{{collection_name}}</h1>
+            <!-- stories -->
+            {% for story in stories %}
+            <div class="story_block">
+                <a href="{{story.href}}">
+                    <h2>{{story.name}}</h2>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
 </html>

@@ -23,18 +23,16 @@
             <a href="/collections">
                 <img src="{% static 'images/collections_icon.png' %}" alt="">
             </a>
-            <!-- Filler -->
-            <a href="#"></a>
             <a href="">
                 <div class="active five"></div>
             </a>
         </div>
         <div class="content">
             <h3>
-                <a href="../{{collection_href}}">{{collection_name}}</a>
-                &rarr; {{story_name}}'s storyline
+                <a href="../{{collection_href}}">&larr; {{collection_name}}</a>
+                
             </h3>
-            <h1>{{story_name}}</h1>
+            <h1>{{story_name}}'s storyline</h1>
             
             <!-- steps -->
             {% for step in steps %}
@@ -53,7 +51,7 @@
 
             <a href="/collections" class="step finished">
                 <div class="step_info">
-                    <h2> &larr;	Collections page</h2>
+                    <h2> Collections page</h2>
                     <h3>Well done! You have finished the {{story_name}} story!</h3>
                 </div>
             </a>

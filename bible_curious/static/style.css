@@ -526,7 +526,7 @@ input:checked+.slider:before {
 }
 
 .step_type {
-    width: 60%;
+    width: 50%;
 }
 
 .step_type img {
@@ -548,7 +548,8 @@ input:checked+.slider:before {
 
 .finished {
     background-color: var(--story);
-    color: white;
+    color: var(--collection);
+    margin-bottom: 10%;
 }
 
 .passage,
