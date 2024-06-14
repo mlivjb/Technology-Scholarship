@@ -49,6 +49,6 @@ class Step(models.Model):
         return f"({self.step_number}) {self.name} ({self.type})"
     
     def calculate_href(self):
-        return f"{self.story.name}/{self.step_number}".replace(" ", "_").lower()
+        return f"{self.story.collection.name}/{self.story.name}/{self.step_number}".replace(" ", "_").lower()
     
     

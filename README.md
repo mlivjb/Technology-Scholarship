@@ -1,6 +1,6 @@
 # Technology-Scholarship
 link to site:
-> (https://mlivjb.github.io/Technology-Scholarship/)
+> (https://biblecurious.azurewebsites.net/)
 ## Description 
 A bible resource for those that are curious about the bible. This is an educational resource used to teach people about the bible, not persuade them to faith. 
 ## What it's about
