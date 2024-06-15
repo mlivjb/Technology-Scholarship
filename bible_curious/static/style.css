@@ -69,6 +69,7 @@ h2 {
     height: 12%;
     bottom: 0%;
     position: fixed;
+    left: 999999px;
     /* border: 1px black solid; */
 }
 
@@ -110,7 +111,7 @@ h2 {
 
 .content {
     padding: 5%;
-    margin-bottom: 20%;
+    margin: 0 0 20% 0;
     max-width: 768%;
     margin-left: auto;
     margin-right: auto;
@@ -253,35 +254,6 @@ a {
 
 :checked+#hidden {
     display: block;
-}
-
-
-.shake {
-    animation: tilt-shaking 1s;
-    animation-fill-mode: backwards;
-
-}
-
-@keyframes tilt-shaking {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(5deg);
-    }
-
-    50% {
-        transform: rotate(0eg);
-    }
-
-    75% {
-        transform: rotate(-5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
 }
 
 .sections{
@@ -474,14 +446,6 @@ input:checked+.slider:before {
     transition: 0.5s ease;
 }
 
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 50%;
-}
-
 .collection_block {
     background-color: var(--collection);
     padding: 2% 10%;
@@ -521,7 +485,7 @@ input:checked+.slider:before {
 }
 
 .step_type {
-    width: 50%;
+    width: 40%;
 }
 
 .step_type img {
@@ -533,6 +497,7 @@ input:checked+.slider:before {
     padding: 2% 5%;
     justify-content: center;
     font-size: 110%;
+    display: block;
 }
 
 .vl {
@@ -553,28 +518,34 @@ input:checked+.slider:before {
     display: inline-block;
 }
 
-.passage p {
-    font-size: 120%;
+.passage {
+    margin: 0;
+    padding: 0;
 }
 
 .passage ul {
-    margin: 3%;
-    list-style-type: circle;
-}
-
-.passage li {
+    list-style-type:square;
     text-indent: 0;
 }
 
+.passage li {
+    font-size: 120%;
+}
+
 .game_page {
-    width: 80%;
+    width: 100%;
     border-radius: 10px;
     background-color: var(--menubar-clr);
     justify-content: center;
     text-align: center;
-    height: 80vh;
+    height: auto;
+    display: inline-block;
 }
 
+.game_page img{
+    width: 80%;
+    padding: 5%;
+}
 
 .verse {
     background-color: var(--verse);

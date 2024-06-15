@@ -9,6 +9,9 @@ def index(request):
             {
                 "name": collection.name, 
                 "href": collection.calculate_href(),
+                "page_title": "zkxchjvgsdjhfgh Collections ",
+                "menu_number": "four",
+                "menu_href": "/collections"
             }
             for collection 
             in Collection.objects.order_by("id")
@@ -65,7 +68,9 @@ def step(story_name, num):
             "collection_name": the_step.story.collection.name,
             "collection_href": the_step.story.collection.calculate_href(),
             "story_name": story_name,
-            "step_number": the_step.step_number
+            "step_number": the_step.step_number,
+            "menu_number": "five",
+            "menu_href": f"../{story_name}".lower()
         }
         return render(request, f"collections/{story_name}/{num}.html", context)
     return step_href

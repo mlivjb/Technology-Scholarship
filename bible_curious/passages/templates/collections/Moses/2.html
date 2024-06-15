@@ -1,52 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "../layout.html" %}
 {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moses - Moses Flees to Midian</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
 
-    <div class="content">
-        <h3>
-            <a href="collections/leaders_of_the_bible/moses">&larr; storyline</a>
-        </h3>
-        <div class="passage">
-            <h1>Moses Flees to Midian</h1>
-            Exodus 2:11-21
-            <img class="profile" src="{% static 'passages/moses.png' %}" alt="">
-            <h2>Moses Kills an Egyptian</h2>
-            <p>One day, after Moses had grown up, he went out to where his own
-                people were and watched them at their hard labour. He saw an
-                Egyptian beating a Hebrew, one of his own people. Looking this way
-                and that and seeing no one, he killed the Egyptian and hid him in
-                the sand. The next day he went out and saw two Hebrews fighting.
-                He asked the one in the wrong, “Why are you hitting your fellow
+{% block content %}
+<h3>
+    <a href="../moses">&larr; storyline</a>
+</h3>
+<div class="passage">
+    <h1>Moses Flees to Midian</h1>
+    <p>Exodus 2:11-21</p>
+    <img class="profile" src="{% static 'passages/moses.png' %}" alt="">
+    <h2>Moses Kills an Egyptian</h2>
+    <p>
+        One day, after Moses had grown up, he went out to where his own
+            people were and watched them at their hard labour. He saw an
+            Egyptian beating a Hebrew, one of his own people. Looking this way
+            and that and seeing no one, he killed the Egyptian and hid him in
+            the sand. <br><br>
+            
+            The next day he went out and saw two Hebrews fighting.
+            He asked the one in the wrong, “Why are you hitting your fellow
                 Hebrew?” The man said, “Who made you ruler and judge over us?
                 Are you thinking of killing me as you killed the Egyptian?” Then
                 Moses was afraid and thought, “What I did must have become known.”
-            </p>
-            <h2>Midian</h2>
-            <p>When Pharaoh heard of this, he tried to kill Moses, but Moses
+    </p>
+    <img src="{% static 'collections/well.png' %}" alt="">
+
+    <h2>Midian</h2>
+    <p>
+        When Pharaoh heard of this, he tried to kill Moses, but Moses
                 fled from Pharaoh and went to live in Midian, where he sat down
                 by a well. Now a priest of Midian had seven daughters, and they
                 came to draw water and fill the troughs to water their father's
                 flock. Some shepherds came along and drove them away, but Moses
                 got up and came to their rescue and watered their flock.
-
+                
                 When the girls returned to Reuel their father, he asked them,
                 “Why have you returned so early today?”
                 They answered, “An Egyptian rescued us from the shepherds. He
                 even drew water for us and watered the flock.”
                 “And where is he?” Reuel asked his daughters. “Why did you leave
                 him? Invite him to have something to eat.”
-
+                
                 Moses agreed to stay with the man, who gave his daughter
-                Zipporah to Moses in marriage. </p>
-        </div>
+                Zipporah to Moses in marriage.
+    </p>
 
-    </div>
-</body>
-
-</html>
+    <h2>Insights</h2>
+    <ul>
+        <li>Moses was passionate about justice for his people, however his 
+            passion turned to anger when he killed the Egyptian. 
+        </li> <br>
+        <li>When Moses flees to Midian we see his passion for justice in a 
+            good way by helping the Midian girls. 
+        </li> <br>
+        <li>By marrying Zipporah he is starting a new life as an Israelite 
+            and embracing his origin. 
+        </li>
+    </ul>
+</div>
+{% endblock content %}
