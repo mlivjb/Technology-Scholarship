@@ -540,6 +540,7 @@ input:checked+.slider:before {
     text-align: center;
     height: auto;
     display: inline-block;
+    margin-bottom: 10%;
 }
 
 .game_page img{
