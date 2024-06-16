@@ -39,7 +39,7 @@ h2 {
     width: 100%;
     overflow: hidden;
     padding: 1%, 0;
-    max-height: 15%;
+    height: 9%;
     align-items: baseline;
     position: fixed;
     z-index: 1;
@@ -547,9 +547,19 @@ input:checked+.slider:before {
     padding: 5%;
 }
 
+.next{
+    margin: 5% auto;
+    text-align: center;
+    color: var(--story);
+    font-weight: bold;
+    font-size: 150%;
+}
+
+
 .verse {
     background-color: var(--verse);
     color: var(--verse-clr);
+    font-weight: bold;
     padding: 3%;
     border-radius: 10px;
 }
