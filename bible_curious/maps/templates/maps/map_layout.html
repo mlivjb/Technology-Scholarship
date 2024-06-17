@@ -11,7 +11,7 @@
     <body>
         <!-- MENUBAR -->
         <div class="menubar">
-            <a href="maps">
+            <a href="/maps">
                 <div class="active one">
                     <img src="{% static 'images/map_black.svg' %}" alt="">
                 </div>
@@ -25,13 +25,18 @@
             <a href="/collections">
                 <img src="{% static 'images/search_black.svg' %}" alt="">
             </a>
-            <a href="collections/leaders_of_the_bible/moses">
+            <a href="/collections/leaders_of_the_bible/moses">
                 <img src="{% static 'images/storyline_black.svg' %}" alt="">
             </a>
         </div>
         <div class="content">
-            <a href="./"> <h3>&larr; Maps</h3></a>
+            <a class="maps" href="./">
+                <h3>&larr; Maps</h3>
+            </a>
+            <h1>{{map_name}} map</h1>
             <img class="map_img" src="{{image_path}}/{{img_name}}" alt="{{map_name}}">
+
         </div>
+
     </body>
 </html>

@@ -27,5 +27,5 @@ def map(map_name):
             "map_name": map_name,
             "img_name": maps.calculate_href() + ".png"
         }
-        return render(request, f"maps/layout_map.html", context)
+        return render(request, f"maps/map_layout.html", context)
     return maps_href
