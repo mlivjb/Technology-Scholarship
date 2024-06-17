@@ -67,6 +67,7 @@ def step(story_name, num):
         context = {
             "collection_name": the_step.story.collection.name,
             "collection_href": the_step.story.collection.calculate_href(),
+            "story_href": "collections/" + the_step.story.calculate_href(),
             "story_name": story_name,
             "step_number": the_step.step_number,
             "menu_number": "five",
