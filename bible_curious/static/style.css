@@ -69,44 +69,37 @@ h2 {
     height: 12%;
     bottom: 0%;
     position: fixed;
-    left: 999999px;
     /* border: 1px black solid; */
+}
+
+.active img{
+    position: relative;
+    width: 85%;
+    padding: 7.5%;
 }
 
 .active.one {
     left: 0;
-    background-image: url("images/map_black.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .active.two {
     left: 18%;
-    background-image: url("images/notes_black.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .active.three {
     left: 37%;
-    background-image: url("images/church_black.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+
 }
 
 .active.four {
     left: 57%;
-    background-image: url("images/search_black.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .active.five {
     left: 77%;
-    background-image: url("images/storyline_black.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
+
+
 
 
 .content {
