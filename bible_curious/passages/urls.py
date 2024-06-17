@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-from .models import Collection, Story, Step
+from .models import Collection, Story, Step, Map
 
 
 urlpatterns = [
@@ -26,4 +26,10 @@ urlpatterns = [
     for step 
     in Step.objects.order_by("id")
 ]
-
+# [
+#     path("", views.index, name="index")
+# ] + [
+#     path(.calculate_href()),
+#     for map 
+#     in Map.objects.order_by("id")
+# ]  

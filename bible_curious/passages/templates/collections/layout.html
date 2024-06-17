@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>QQQ - {{page_title}}</title>
+        <title>{{page_title}}</title>
         <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
@@ -23,15 +23,10 @@
                 <img src="{% static 'images/search_black.svg' %}"alt="">
             </a>
             <a href="leaders_of_the_bible/moses">
-                <div class="active">
+                <div class="active five">
                     <img src="{% static 'images/storyline_black.svg' %}"alt="">
                 </div>
             </a>
-            <!-- <a href="{{ menu_href }}">
-                <div class="active {{ menu_number }}">
-                    <img src="{% static images/}" alt="">
-                </div>
-            </a> -->
         </div>
         <div class="content">
             {% block content %}{% endblock content %}

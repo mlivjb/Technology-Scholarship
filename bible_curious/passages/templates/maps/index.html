@@ -30,7 +30,16 @@
         </div>
         <div class="content">
             <h1>Maps</h1>
-            <h2>COMING SOON</h2>
+            
+            {% for map in maps %}
+            <div class="map_block">
+                <a href="{{ map.href }}">
+                    <h2>{{map.name}}</h2>
+                </a>
+            </div>
+            {% endfor %}
+
+            
         </div>
     </body>
 </html>

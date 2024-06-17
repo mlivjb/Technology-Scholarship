@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Notes</title>
+        <title>{{page_title}}</title>
         <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
@@ -13,24 +13,24 @@
             <a href="/maps">
                 <img src="{% static 'images/map_black.svg' %}" alt="">
             </a>
-            <a href="notes">
-                <div class="active two">
-                    <img src="{% static 'images/notes_black.svg' %}" alt="">
-                </div>
+            <a href="/notes">
+                <img src="{% static 'images/notes_black.svg' %}" alt="">
             </a>
             <a href="/">
                 <img src="{% static 'images/church_black.svg' %}" alt="">
             </a>
-            <a href="collections">
-                <img src="{% static 'images/search_black.svg' %}" alt="">
+            <a href="/collections">
+                <img src="{% static 'images/search_black.svg' %}"alt="">
             </a>
-            <a href="collections/leaders_of_the_bible/moses">
-                <img src="{% static 'images/storyline_black.svg' %}" alt="">
+            <a href="leaders_of_the_bible/moses">
+                <div class="active">
+                    <img src="{% static 'images/storyline_black.svg' %}"alt="">
+                </div>
             </a>
         </div>
         <div class="content">
-            <h1>Notes</h1>
-            <h2>COMING SOON</h2>
+            <a href="./"> <h3>&larr; Maps</h3></a>
+            <img class="map_img" src="{% static 'collections/maps/{{map_name}}.png' %}" alt="{{map.name}}">
         </div>
     </body>
 </html>
