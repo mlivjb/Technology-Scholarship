@@ -24,7 +24,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path('collections/', include('passages.urls')),
     path("notes", views.notes, name="notes"),
-    path("maps", views.maps, name="maps"),
+    path("maps/", include('maps.urls')),
     path('admin/', admin.site.urls),
     path("verse", views.verse, name="verse")
 ]

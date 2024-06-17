@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'passages.apps.PassagesConfig',
+    'maps.apps.MapsConfig',
     'whitenoise.runserver_nostatic',
 ]
 

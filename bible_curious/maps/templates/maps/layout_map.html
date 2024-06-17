@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% static 'maps' as image_path %}
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -10,27 +11,27 @@
     <body>
         <!-- MENUBAR -->
         <div class="menubar">
-            <a href="/maps">
-                <img src="{% static 'images/map_black.svg' %}" alt="">
+            <a href="maps">
+                <div class="active one">
+                    <img src="{% static 'images/map_black.svg' %}" alt="">
+                </div>
             </a>
-            <a href="/notes">
+            <a href="notes">
                 <img src="{% static 'images/notes_black.svg' %}" alt="">
             </a>
             <a href="/">
                 <img src="{% static 'images/church_black.svg' %}" alt="">
             </a>
             <a href="/collections">
-                <img src="{% static 'images/search_black.svg' %}"alt="">
+                <img src="{% static 'images/search_black.svg' %}" alt="">
             </a>
-            <a href="leaders_of_the_bible/moses">
-                <div class="active">
-                    <img src="{% static 'images/storyline_black.svg' %}"alt="">
-                </div>
+            <a href="collections/leaders_of_the_bible/moses">
+                <img src="{% static 'images/storyline_black.svg' %}" alt="">
             </a>
         </div>
         <div class="content">
             <a href="./"> <h3>&larr; Maps</h3></a>
-            <img class="map_img" src="{% static 'collections/maps/{{map_name}}.png' %}" alt="{{map.name}}">
+            <img class="map_img" src="{{image_path}}/{{img_name}}" alt="{{map_name}}">
         </div>
     </body>
 </html>

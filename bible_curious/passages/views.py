@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse, render
 
-from .models import Collection, Story, Step, Map
+from .models import Collection, Story, Step
 
 
 def index(request):

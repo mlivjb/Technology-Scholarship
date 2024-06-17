@@ -51,25 +51,7 @@ class Step(models.Model):
     def calculate_href(self):
         return f"{self.story.collection.name}/{self.story.name}/{self.step_number}".replace(" ", "_").lower()
     
-class Map_collection(models.Model):
-    name = models.CharField(max_length=50)
-    
-    def  __str__(self) -> str:
-        return f"{self.id} {self.name}"
-    
-    def calculate__maphref(self):
-        return self.name.replace(" ", "_").lower()
-    
-class Map(models.Model):
-    name = models.CharField(max_length=50)
-    #delete everything under Map_collection first
-    map_collection = models.ForeignKey(Map_collection, on_delete=models.RESTRICT)
-    
-    def  __str__(self) -> str:
-        return f"({self.id}) {self.name}"
-    
-    def calculate_href(self):
-        return f"{self.map_collection.name}/{self.name}".replace(" ", "_").lower()
+
 
 
     
