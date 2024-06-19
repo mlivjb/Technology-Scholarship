@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{page_title}}</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <!-- MENUBAR -->
+        <div class="menubar">
+            <a href="/maps">
+                <img src="{% static 'images/map_black.svg' %}" alt="">
+            </a>
+            <a href="/notes">
+                <img src="{% static 'images/notes_black.svg' %}" alt="">
+            </a>
+            <a href="/">
+                <img src="{% static 'images/church_black.svg' %}" alt="">
+            </a>
+            <a href="/collections">
+                <img src="{% static 'images/search_black.svg' %}"alt="">
+            </a>
+            <a href="/{{ story_href }}">
+                <div class="active five">
+                    <img src="{% static 'images/storyline_black.svg' %}"alt="">
+                </div>
+            </a>
+        </div>
+        <div class="content">
+            <h1>Well done you have finished the {{story_name}} story!</h1>
+            <img src="{% static 'collections/moses.png' %}" alt="">
+            <h2>Upcoming story is {{next_story_name}}</h2>
+            <div class="story_block">{{next_story_name}}</div>
+        </div>
+    </body>
+</html>
