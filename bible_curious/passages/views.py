@@ -72,7 +72,8 @@ def step(story_name, num):
             "step_number": the_step.step_number,
             "menu_number": "five",
             "menu_href": f"../{story_name}".lower(),
-            "next_step": num + 1
+            "next_step": num + 1,
+            "prev_step": num - 1
         }
         return render(request, f"collections/{story_name}/{num}.html", context)
     return step_href

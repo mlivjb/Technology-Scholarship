@@ -552,12 +552,29 @@ input:checked+.slider:before {
     padding: 5%;
 }
 
-.next{
-    margin: 5% auto;
-    text-align: center;
-    color: var(--story);
+.step_nav{
     font-weight: bold;
     font-size: 150%;
+    width: 100%;
+    margin-bottom: 30%;
+}
+
+.next{
+    display: block;
+    width: auto;
+    float: right;
+    padding: 5% 10%;
+    color: var(--story);
+    text-align: right;
+}
+
+.prev{
+    display: block;
+    width: auto;
+    float: left;
+    padding: 5% 10%;
+    color: var(--story);
+    text-align: left;
 }
 
 
