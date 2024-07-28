@@ -39,24 +39,17 @@
             <div class="verse_info verse_letters">
                 <h2>Verse of the week</h2>
                 <p>
-                    Consider it pure joy, my brothers and sisters, 
-                    whenever you face trials of many kinds, because you know 
-                    that the testing of your faith produces perseverance.
+                    {{ verse.verse }}
                 </p>
-                <p>James 1:2-3 NIV</p>
+                <p>{{ verse.reading }} NIV</p>
             </div>
             <!-- explanation -->
-            <div class="sections verse_letters">
+            <div class="sections verse_{{ verse.group }}">
                 <label for="collapse1">
                     <h3 class="explanation">&darr; explanation</h3>
                 </label>
                 <input type="checkbox" id="collapse1" style="display:none;">
-                <div id="hidden" class="explanation">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Ex corrupti harum aperiam excepturi hic minus ipsum quis 
-                architecto voluptas sapiente officia autem amet, dolore vel 
-                suscipit dicta cupiditate sit corporis?
-                </div>
+                <div id="hidden" class="explanation">{{ verse.explanation }}</div>
             </div>
             <!-- sections of the bible -->
             <h1>Sections of the Bible</h1>

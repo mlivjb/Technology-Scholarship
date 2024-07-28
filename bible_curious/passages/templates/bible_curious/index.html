@@ -36,14 +36,11 @@
             </div>
             <h1>Verse of the week</h1>
             <a href="/verse">
-                <div class="verse_of_the_week verse_letters">
+                <div class="verse_of_the_week verse_{{ verse.group }}">
                     <p>
-                        Consider it pure joy, my brothers and sisters, 
-                        whenever you face trials of many kinds, because you 
-                        know that the testing of your faith produces 
-                        perseverance.
+                        {{ verse.verse }}
                     </p>
-                    <p class="ref">James 1:2-3 NIV</p>
+                    <p class="ref">{{ verse.reading }} NIV</p>
                 </div>
             </a>
             <h1>Current Stories</h1>

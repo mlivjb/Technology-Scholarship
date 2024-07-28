@@ -1,7 +1,14 @@
 from django.shortcuts import HttpResponse, render
+from datetime import date
+
+from passages.models import Verse
 
 def index(request):
-    context = {}
+    this_week = date.today().isocalendar().week
+    verse = Verse.objects.filter(week=this_week).first()
+    context = {
+        "verse": verse
+    }
     return render(request, "bible_curious/index.html", context)
 
 def maps(request):
@@ -13,5 +20,9 @@ def notes(request):
     return render(request, "bible_curious/notes.html", context)
 
 def verse(request):
-    context = {}
+    this_week = date.today().isocalendar().week
+    verse = Verse.objects.filter(week=this_week).first()
+    context = {
+        "verse": verse
+    }
     return render(request, "bible_curious/verse_info.html", context)
