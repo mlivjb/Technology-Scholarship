@@ -281,6 +281,18 @@ a {
     margin: 5% 0;
     background-color: var(--verse);
     box-shadow: var(--shadow) 3px 4px 7px 0;
+    color: var(--verse-clr);
+}
+
+.more {
+    padding: 0.5%;
+    width: 90%;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 2% 0;
+    background-color: var(--story);
+    box-shadow: var(--shadow) 3px 4px 7px 0;
+    color: var(--p-text);
 }
 
 
