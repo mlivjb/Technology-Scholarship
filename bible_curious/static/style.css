@@ -325,10 +325,12 @@ a {
 
 .sections p {
     font-size: 120%;
+
 }
 
 .explanation {
     color: var(--verse-clr);
+    font-weight: bold;
 }
 
 .current_stories_scroll {
