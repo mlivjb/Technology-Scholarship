@@ -51,6 +51,9 @@ class Step(models.Model):
     def calculate_href(self):
         return f"{self.story.collection.name}/{self.story.name}/{self.step_number}".replace(" ", "_").lower()
     
+class Verse(models.Model):
+    """ Definition of model for verses of the week."""
+    
 
 
 

@@ -2,6 +2,8 @@ from django.shortcuts import HttpResponse, render
 
 from .models import Collection, Story, Step
 
+import datetime
+
 
 def index(request):
     context = {
@@ -9,7 +11,7 @@ def index(request):
             {
                 "name": collection.name, 
                 "href": collection.calculate_href(),
-                "page_title": "zkxchjvgsdjhfgh Collections ",
+                "page_title": "Collections",
                 "menu_number": "four",
                 "menu_href": "/collections"
             }
@@ -77,3 +79,10 @@ def step(story_name, num):
         }
         return render(request, f"collections/{story_name}/{num}.html", context)
     return step_href
+
+def verse(verse_name, week):
+    today = datetime.datetime.today()
+    week = today.isocalendar()[1]
+    
+    # find the verse associated with this week and show it in template
+
