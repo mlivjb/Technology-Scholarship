@@ -53,8 +53,11 @@ class Step(models.Model):
     
 class Verse(models.Model):
     """ Definition of model for verses of the week."""
-    
+    reading = models.CharField(max_length=50)
+    verse = models.TextField()
+    explanation = models.TextField()
+    group = models.CharField(max_length=50)
+    week = models.IntegerField()
 
-
-
-    
+    def  __str__(self) -> str:
+        return f"({self.week}) {self.reading}"
