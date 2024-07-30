@@ -23,6 +23,14 @@ p {
     justify-content: center;
 }
 
+.back {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--background);
+    padding-bottom: 2%;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
