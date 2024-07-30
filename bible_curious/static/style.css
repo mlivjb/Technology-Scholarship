@@ -21,6 +21,7 @@ p {
     width: 90%;
     margin: auto;
     justify-content: center;
+    background-image: var(--logo);
 }
 
 .back {
@@ -637,6 +638,7 @@ img.profile {
     --verse-clr: #08415c;
     --step-clr: #08415c;
     --shadow: #606d74;
+    --logo: url(images/bc_logo_blue.png)
 }
 
 /* darkmode */
@@ -652,5 +654,6 @@ img.profile {
         --verse-clr: #08415c;
         --step-clr: #08415c;
         --shadow: #557391;
+        --logo: url(images/bc_logo_white.png)
     }
 }
