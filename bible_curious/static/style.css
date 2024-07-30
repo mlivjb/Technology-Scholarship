@@ -17,6 +17,12 @@ p {
 
 }
 
+.logo {
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
