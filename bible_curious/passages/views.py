@@ -78,11 +78,6 @@ def step(story_name, num):
             "prev_step": num - 1
         }
         return render(request, f"collections/{story_name}/{num}.html", context)
+            
     return step_href
-
-def verse(verse_name, week):
-    today = datetime.datetime.today()
-    week = today.isocalendar()[1]
-    
-    # find the verse associated with this week and show it in template
 
