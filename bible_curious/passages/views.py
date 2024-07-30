@@ -64,7 +64,8 @@ def storyline(story_name):
 
 def step(story_name, num): 
     # look up stories object with a matching name
-    the_step = Step.objects.filter(step_number = num).filter(story__name = story_name).first()
+    story_steps = Step.objects.filter(story__name = story_name).order_by('step_number')
+    the_step = story_steps[num - 1]
     def step_href(request):
         context = {
             "collection_name": the_step.story.collection.name,
@@ -75,7 +76,9 @@ def step(story_name, num):
             "menu_number": "five",
             "menu_href": f"../{story_name}".lower(),
             "next_step": num + 1,
-            "prev_step": num - 1
+            "prev_step": num - 1,
+            "prev_exists": num > 1,
+            "next_exists": num < story_steps.count()
         }
         return render(request, f"collections/{story_name}/{num}.html", context)
             

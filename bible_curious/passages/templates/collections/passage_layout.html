@@ -37,18 +37,22 @@
             
 
             <div class="step_nav">
+                {% if prev_exists %}
                 <a href="{{ prev_step }}">
                     <div class="prev">
                         Prev<br>
                         &larr; 
                     </div>    
                 </a>
+                {% endif %}
+                {% if next_exists %}
                 <a href="{{ next_step }}">
                     <div class="next">
                         Next<br>
                         &rarr; 
                     </div>    
                 </a>
+                {% endif %}
             </div>
 
         </div>
