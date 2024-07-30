@@ -27,8 +27,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--background);
-    padding-bottom: 2%;
+    padding: 2%;
 }
 
 ::-webkit-scrollbar {
