@@ -28,7 +28,11 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2%;
+    padding: 3%;
+}
+
+.head {
+    margin-top: 5%;
 }
 
 ::-webkit-scrollbar {
