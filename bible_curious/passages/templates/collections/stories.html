@@ -37,7 +37,7 @@
             <!-- stories -->
             {% for story in stories %}
             <a href="{{story.href}}" >
-                <div class="story_block">
+                <div class="story_block {{story.name}}">
                     <h2>{{story.name}}</h2>
                 </div>
             </a>
