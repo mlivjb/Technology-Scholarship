@@ -695,7 +695,7 @@ img.profile {
         --shadow: #557391;
         }
     .logo {
-        background-image: url(images/bc_logo_white.png);
+        background-image: url(images/bc_logo.png);
     }
     .user_icon {
         background-image: url(images/profile_white.svg);
