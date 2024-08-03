@@ -11,25 +11,37 @@ body {
 }
 
 .logo {
-    width: 90%;
-    background-color: var(--menubar-clr);
-    display: inline-block;
-    padding: 5%;
-    max-height: 10%;
-    background-image: url(images/bc_logo.png);
-    background-position: 50% 100%;
-    background-size: 90%;
+    width: 85%;
+    margin-bottom: 0;
+    padding: 4% 5% 4% 0;
+    background-image: url(images/bc_logo.svg);
+    background-position: 0%;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.home {
+    margin-top: 0;
+    background-image: url(images/profile_black.svg);
+    background-position: 90% 5.5%;
+    background-size: 6%;
     background-repeat: no-repeat;
 }
 
-.logo img {
-    width: 20%;
-    justify-content: center;
-    display: inline-block;
+.bg-logo {
+    background-image: linear-gradient(180deg, var(--menubar-gradient1), var(--menubar-gradient2),rgba(0, 0, 0, 0));
+    background-position: 2% 0%;
+    background-size: 100% 18%;
+    background-repeat: no-repeat;
 }
 
-.logo h2 {
-    display: inline-block;
+.user {
+    display: inline;
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+    justify-content: center;
 }
 
 p {
@@ -673,6 +685,8 @@ img.profile {
     --background: #fff;
     --p-text: #08415c;
     --menubar-clr: #afc7d4;
+    --menubar-gradient1: #afc7d4f7;
+    --menubar-gradient2: #afc7d4d3;
     --collection: #08415c;
     --story: #8db9b4;
     --step: #afc7d4;
@@ -688,6 +702,8 @@ img.profile {
         --background: #282f33;
         --p-text: #ededed;
         --menubar-clr: #8db9b4;
+        --menubar-gradient: #8db9b4de;
+        --menubar-gradient2: #8db9b44f;
         --collection: #08415c;
         --story: #8db9b4;
         --step: #95bed4;
@@ -695,5 +711,13 @@ img.profile {
         --verse-clr: #08415c;
         --step-clr: #08415c;
         --shadow: #557391;
-        }
+    }
+    .logo {
+        background-image: url(images/bc_logo_white.png);
+    }
+
+    .logo h2 {
+        color: #fff;
+    }
+    
 }

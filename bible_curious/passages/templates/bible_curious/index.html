@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
 </head>
 
-<body>
+<body class="bg-logo">
     <!-- MENUBAR -->
     <div class="menubar">
         <a href="/maps">
@@ -31,15 +31,15 @@
             <img src="{% static 'images/storyline_black.svg' %}" alt="">
         </a>
     </div>
-
-    <div class="logo">
-        <img src="{% static 'images/profile_black.svg' %}" alt="">
-        <h2 class="user">mlivjb</h2>
-        <!-- <img src="{% static 'images/bc_logo.png' %}" alt=""> -->
-    </div>
-    
-    <div class="content">
-        <h1>Verse of the week</h1>
+    <div class="content home">
+        <a href="/">
+            <div class="logo">
+                <a href="/profile">
+                    <h2 class="user">mlivjb</h2>
+                </a>
+            </div>
+        </a>
+        <h1>Verse of the Week</h1>
         <a href="/verse">
             <div class="verse_of_the_week verse_{{ verse.group }}">
                 <p>

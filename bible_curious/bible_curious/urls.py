@@ -26,5 +26,6 @@ urlpatterns = [
     path("notes", views.notes, name="notes"),
     path("maps/", include('maps.urls')),
     path('admin/', admin.site.urls),
-    path("verse", views.verse, name="verse")
+    path('verse', views.verse, name="verse"),
+    path('profile', views.profile, name="profile")
 ]

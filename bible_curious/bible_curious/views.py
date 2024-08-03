@@ -26,3 +26,7 @@ def verse(request):
         "verse": verse
     }
     return render(request, "bible_curious/verse_info.html", context)
+
+def profile(request):
+    context = {}
+    return render(request, "bible_curious/profile.html", context)
