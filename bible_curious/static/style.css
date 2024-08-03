@@ -11,18 +11,24 @@ body {
 }
 
 .logo {
-    width: 100%;
+    width: 90%;
     background-color: var(--menubar-clr);
     display: inline-block;
     padding: 5%;
-    max-height: 15%;
+    max-height: 10%;
     background-image: url(images/bc_logo.png);
     background-position: 50% 100%;
+    background-size: 90%;
+    background-repeat: no-repeat;
 }
 
 .logo img {
-    width: 50%;
+    width: 20%;
     justify-content: center;
+    display: inline-block;
+}
+
+.logo h2 {
     display: inline-block;
 }
 
