@@ -39,6 +39,7 @@ body {
     background-position: 2% 0%;
     background-size: 100% 18%;
     background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .user {
