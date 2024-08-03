@@ -11,10 +11,19 @@ body {
 }
 
 .logo {
+    width: 100%;
+    background-color: var(--menubar-clr);
+    display: inline-block;
+    padding: 5%;
+    max-height: 15%;
     background-image: url(images/bc_logo.png);
-    background-repeat: no-repeat;
-    background-position: 95% 3%;
-    background-size: 52%;
+    background-position: 50% 100%;
+}
+
+.logo img {
+    width: 50%;
+    justify-content: center;
+    display: inline-block;
 }
 
 p {
@@ -35,19 +44,6 @@ p {
     margin-top: 12%;
 }
 
-span.user_icon{
-    margin: 0;
-    height:30%;
-    width: 10%;
-    font-size: 150%;
-    display: inline-block;
-    padding: 0.5%;
-    justify-content: center;
-    background-image: url(images/profile_black.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: rgba(255, 255, 255, 0);
-}
 
 h2.user{
     right: 0;
@@ -694,13 +690,4 @@ img.profile {
         --step-clr: #08415c;
         --shadow: #557391;
         }
-    .logo {
-        background-image: url(images/bc_logo.png);
-    }
-    .user_icon {
-        background-image: url(images/profile_white.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #282f3300;
-    }
 }
