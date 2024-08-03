@@ -8,6 +8,11 @@ body {
     line-height: 1.5;
     font-family: "Karla", sans-serif;
     width: 100vw;
+    background-image: url(images/bc_icon_white.png);
+    background-repeat: no-repeat;
+    background-size: 12%;
+    background-position: 95% 3%;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -24,7 +29,7 @@ body {
 .home {
     margin-top: 0;
     background-image: url(images/profile_black.svg);
-    background-position: 9% 5.5%;
+    background-position: 92% 6.5%;
     background-size: 6%;
     background-repeat: no-repeat;
 }
@@ -118,7 +123,7 @@ h2 {
 .menubar .active {
     border-radius: 50%;
     background-color: var(--menubar-clr);
-    z-index: 1;
+    z-index: -1;
     width: 23%;
     height: 12%;
     bottom: 0%;
@@ -702,8 +707,8 @@ img.profile {
         --background: #282f33;
         --p-text: #ededed;
         --menubar-clr: #8db9b4;
-        --menubar-gradient: #8db9b4de;
-        --menubar-gradient2: #8db9b44f;
+        --menubar-gradient1: #558983de;
+        --menubar-gradient2: #6299938c;
         --collection: #08415c;
         --story: #8db9b4;
         --step: #95bed4;
@@ -715,9 +720,11 @@ img.profile {
     .logo {
         background-image: url(images/bc_logo_white.png);
     }
-
     .logo h2 {
         color: #fff;
+    }
+    .home {
+        background-image: url(images/profile_white.svg);
     }
     
 }
