@@ -188,31 +188,6 @@ a {
     margin-right: 5%;
 }
 
-.map_block {
-    background-color: var(--verse);
-    padding: 2% 10%;
-    border-radius: 10px;
-    box-shadow: var(--shadow) 3px 4px 7px 0;
-    margin: 10% 0;
-}
-
-.map_block h2{
-    color: var(--collection);
-}
-
-.map_content h2 {
-    color: var(--p-text)
-}
-
-.map_block a {
-    text-align: center;
-    font-size: 120%;
-}
-
-.map_img {
-    width: 100%;
-    margin-bottom: 5%;
-}
 
 .verse_of_the_week {
     border-radius: 10px;
@@ -527,6 +502,34 @@ input:checked+.slider:before {
     padding-left: 5%;
     font-size: 150%;
 
+}
+
+.map_block {
+    background-color: var(--verse);
+    padding: 2% 10%;
+    border-radius: 10px;
+    box-shadow: var(--shadow) 3px 4px 7px 0;
+    margin: 10% 0;
+    text-align: center;
+    font-size: 120%;
+}
+
+.map_block h2{
+    color: var(--collection);
+}
+
+.map_content h2 {
+    color: var(--p-text)
+}
+
+.map_block a {
+    text-align: center;
+    font-size: 120%;
+}
+
+.map_img {
+    width: 100%;
+    margin-bottom: 5%;
 }
 
 .story_block {
