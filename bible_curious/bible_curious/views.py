@@ -1,5 +1,5 @@
 from django.shortcuts import HttpResponse, render
-from datetime import date
+from datetime import date, datetime
 
 from passages.models import Verse
 
@@ -7,7 +7,7 @@ def index(request):
     this_week = date.today().isocalendar().week
     verse = Verse.objects.filter(week=this_week).first()
     context = {
-        "verse": verse
+        "verse": verse,
     }
     return render(request, "bible_curious/index.html", context)
 
