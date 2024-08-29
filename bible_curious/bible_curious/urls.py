@@ -27,5 +27,10 @@ urlpatterns = [
     path("maps/", include('maps.urls')),
     path('admin/', admin.site.urls),
     path('verse', views.verse, name="verse"),
-    path('profile', views.profile, name="profile")
+    path('profile', views.profile, name="profile"),
+    
+    path('login', views.login, name="login"),
+    path('callback', views.callback, name="callback"),
+    path('logout', views.logout, name="logout"),
+    
 ]

@@ -37,6 +37,15 @@
                 <h3>hello</h3>
             </div>
         </a>
+        {% if session %}
+        <h2>username : {{session.userinfo.name}}</h2>
+        <img src="{{session.userinfo.picture}}" alt="">
+        {% else %}
+        <a href="/login">LOGIN</a>
+        {% endif %}
+
+
+
         <h1>Verse of the Week</h1>
         <a href="/verse">
             <div class="verse_of_the_week verse_{{ verse.group }}">

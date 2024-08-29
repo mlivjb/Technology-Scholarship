@@ -33,6 +33,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: create env file
+        run: |
+          touch .env
+          echo AUTH0_CLIENT_ID=${{ secrets.AUTH0_CLIENT_ID }} >> .env
+          echo AUTH0_CLIENT_SECRET=${{ secrets.AUTH0_CLIENT_SECRET }} >> .env
+          echo AUTH0_DOMAIN=${{ secrets.AUTH0_DOMAIN }} >> .env
+          cat .env
+
       - name: collect static files
         run: python manage.py collectstatic
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)

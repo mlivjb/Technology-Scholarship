@@ -61,3 +61,8 @@ class Verse(models.Model):
 
     def  __str__(self) -> str:
         return f"({self.week}) {self.reading}"
+
+class Personalisation(models.Model):
+    user_id = models.CharField(max_length=100),
+    current_story = models.CharField(max_length=50),
+    current_step = models.IntegerField()

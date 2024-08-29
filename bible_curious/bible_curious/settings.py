@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
 from pathlib import Path
-from os import getenv, path
+from os import getenv, path, environ
+from dotenv import load_dotenv, find_dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -134,3 +134,14 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Load environment def file
+ENV_FILE = find_dotenv()
+if ENV_FILE:
+    load_dotenv(ENV_FILE)
+
+
+# Load Auth0 application settings into memory
+AUTH0_DOMAIN = environ.get("AUTH0_DOMAIN")
+AUTH0_CLIENT_ID = environ.get("AUTH0_CLIENT_ID")
+AUTH0_CLIENT_SECRET = environ.get("AUTH0_CLIENT_SECRET")

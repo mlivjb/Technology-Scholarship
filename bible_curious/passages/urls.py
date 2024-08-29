@@ -5,7 +5,7 @@ from .models import Collection, Story, Step
 
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", views.index, name="collections"),
 ] + [
     path(collection.calculate_href(), 
     views.stories(collection.name), 

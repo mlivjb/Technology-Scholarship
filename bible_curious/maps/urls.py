@@ -5,7 +5,7 @@ from .models import Map
 
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", views.index, name="maps"),
 ] + [
     path(map.calculate_href(), 
     views.map(map.name), 
