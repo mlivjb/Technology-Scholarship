@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bible curious | Home</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
-</head>
-
-<body class="bg-logo">
-    <!-- MENUBAR -->
-    <div class="menubar">
-        <a href="/maps">
-            <img src="{% static 'images/map_black.svg' %}" alt="">
-        </a>
-        <a href="notes">
-            <img src="{% static 'images/notes_black.svg' %}" alt="">
-        </a>
-        <a href="/">
-            <div class="active three">
-                <img src="{% static 'images/church_black.svg' %}" alt="">
-            </div>
-        </a>
-        <a href="/collections">
-            <img src="{% static 'images/search_black.svg' %}" alt="">
-        </a>
-        <a href="collections/leaders_of_the_bible/moses">
-            <img src="{% static 'images/storyline_black.svg' %}" alt="">
-        </a>
-    </div>
-    <div class="content">
-        <a href="/">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bible curious | Home</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    </head>
+    <body class="bg-logo">
+        <!-- MENUBAR -->
+        <div class="menubar">
+            <a href="/maps">
+                <img src="{% static 'images/map_black.svg' %}" alt="">
+            </a>
+            <a href="notes">
+                <img src="{% static 'images/notes_black.svg' %}" alt="">
+            </a>
+            <a href="/">
+                <div class="active three">
+                    <img src="{% static 'images/church_black.svg' %}" alt="">
+                </div>
+            </a>
+            <a href="/collections">
+                <img src="{% static 'images/search_black.svg' %}" alt="">
+            </a>
+            <a href="collections/leaders_of_the_bible/moses">
+                <img src="{% static 'images/storyline_black.svg' %}" alt="">
+            </a>
+        </div>
+        <div class="content">
             <div class="logo">
                 <h3>hello</h3>
             </div>
-        </a>
-        {% if session %}
-        <h2>username : {{session.userinfo.name}}</h2>
-        <img src="{{session.userinfo.picture}}" alt="">
-        {% else %}
-        <a href="/login">LOGIN</a>
-        {% endif %}
-
-
-
-        <h1>Verse of the Week</h1>
-        <a href="/verse">
-            <div class="verse_of_the_week verse_{{ verse.group }}">
-                <p>
-                    {{ verse.verse }}
-                </p>
-                <p class="ref">{{ verse.reading }} NIV</p>
-            </div>
-        </a>
-        <h1>Current Stories</h1>
-        <div class="current_stories_scroll">
-            <div class="current_story_block">
-                <a class="c_s_story Moses" href="collections/leaders_of_the_bible/moses">
-                    Moses
+            {% if session %}
+            <div class="pfp_home">
+                <a href="profile">
+                    <img src="{{session.userinfo.picture}}" alt="">
+                    <h3 class="username">{{session.userinfo.name}}</h3>
                 </a>
-                <a class="c_s_collection" href="collections/leaders_of_the_bible">Leaders of the Bible</a>
             </div>
-            <div class="current_story_block">
-                <a class="c_s_story Ruth" href="collections/women_in_the_bible/ruth">
-                    Ruth
-                </a>
-                <a class="c_s_collection" href="collections/women_in_the_bible">Women in the Bible</a>
+            {% else %}
+            <a href="/login">LOGIN</a>
+            {% endif %}
+            <h1>{{domainsee}}</h1>
+            <h1>Verse of the Week</h1>
+            <a href="/verse">
+                <div class="verse_of_the_week verse_{{ verse.group }}">
+                    <p>
+                        {{ verse.verse }}
+                    </p>
+                    <p class="ref">{{ verse.reading }} NIV</p>
+                </div>
+            </a>
+            <h1>Current Stories</h1>
+            <div class="current_stories_scroll">
+                <div class="current_story_block">
+                    <a class="c_s_story Moses" href="collections/leaders_of_the_bible/moses">
+                        Moses
+                    </a>
+                    <a class="c_s_collection" href="collections/leaders_of_the_bible">Leaders of the Bible</a>
+                </div>
+                <div class="current_story_block">
+                    <a class="c_s_story Ruth" href="collections/women_in_the_bible/ruth">
+                        Ruth
+                    </a>
+                    <a class="c_s_collection" href="collections/women_in_the_bible">Women in the Bible</a>
+                </div>
+                <div class="current_story_block">
+                    <a class="c_s_story" href="collections/">
+                        Intro 1
+                    </a>
+                    <a class="c_s_collection" href="collections/leaders_of_the_bible">Intro to the Bible</a>
+                </div>
             </div>
-            <div class="current_story_block">
-                <a class="c_s_story" href="collections/">
-                    Intro 1
-                </a>
-                <a class="c_s_collection" href="collections/leaders_of_the_bible">Intro to the Bible</a>
-            </div>
-        </div>
-</body>
-
-</html>
+        </body>
+    </html>

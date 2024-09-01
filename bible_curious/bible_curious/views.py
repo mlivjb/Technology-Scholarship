@@ -14,7 +14,8 @@ def index(request):
     context = {
         "verse": verse,
         "session": request.session.get("user"),
-        "pretty": json.dumps(request.session.get("user"), indent=4)
+        "pretty": json.dumps(request.session.get("user"), indent=4),
+        "domainsee": settings.AUTH0_DOMAIN
     }
     return render(request, "bible_curious/index.html", context)
 
