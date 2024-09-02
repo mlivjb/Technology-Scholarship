@@ -22,6 +22,7 @@ body {
 div.pfp_home{
     padding-left: 70%;
     text-align: center;
+    top: 0;
 }
 
 .pfp_home img {
