@@ -37,12 +37,11 @@
             <div class="pfp_home">
                 <a href="profile">
                     <img src="{{session.userinfo.picture}}" alt="">
-                    <!-- <h3 class="username">{{session.userinfo.name}}</h3> -->
                 </a>
             </div>
             {% else %}
             <div class="pfp_home">
-                <a href="/login">LOGIN</a>
+                <a class="login" href="/login">LOGIN</a>
                 
             </div>
             {% endif %}
@@ -57,9 +56,8 @@
                     <p class="ref">{{ verse.reading }} NIV</p>
                 </div>
             </a>
-            
+            <h1>Your Stories</h1>
             {% if session %}
-            <h1>Current Stories</h1>
             <div class="current_stories_scroll">
                 <div class="current_story_block">
                     <a class="c_s_story Moses" href="collections/leaders_of_the_bible/moses">
@@ -80,6 +78,8 @@
                     <a class="c_s_collection" href="collections/leaders_of_the_bible">Intro to the Bible</a>
                 </div>
             </div>
+            {% else %}
+            <a href="/login">LOGIN</a> to see Your Stories
             {% endif %}
         </div>
     </body>

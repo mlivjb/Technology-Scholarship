@@ -19,15 +19,23 @@ body {
     background-attachment: fixed;
 }
 
+.login {
+    display: inline-block;
+    overflow: none;
+    margin: 2%;
+    width: 55%;
+    background-color: var(--menubar-clr);
+}
+
 div.pfp_home{
     text-align: center;
     position: absolute;
-    right: 5%;
-    top: 2%;
+    right: 4%;
+    top: 4%;
 }
 
 .pfp_home img {
-    width: 66%;
+    width: 50%;
     border-radius: 50%;
     margin: 0;
     padding: 0;
@@ -45,7 +53,7 @@ div.logo {
     width: 70%;
     margin-bottom: 0;
     padding: 4% 5% 4% 0;
-    background-image: url(images/bc_logo.svg);
+    background-image: url(images/bc_logo_white.png);
     background-position: 0%;
     background-size: 55%;
     background-repeat: no-repeat;

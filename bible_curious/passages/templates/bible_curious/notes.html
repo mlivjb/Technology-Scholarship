@@ -35,13 +35,14 @@
                 <a href="/">&larr; Home</a>
             </h3>
 
-            <a href="/" class="icon">
-            </a>
+            <h1 class="head">Your Stuff</h1>
+            {% if session %}
+            <h3>Favourites</h3>
+            {% else %}
+            <h3>To see your notes and favourited stuff login below</h3>
+            <a href="/login">LOGIN</a>
+            {% endif %}
 
-            
-            
-            <h1 class="head">Notes</h1>
-            <h2>COMING SOON</h2>
         </div>
     </body>
 </html>
