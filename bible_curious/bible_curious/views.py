@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse, render, redirect
 from datetime import date, datetime
-from passages.models import Verse
+from passages.models import Verse, FavouriteVerses
 from authlib.integrations.django_client import OAuth
 from django.conf import settings
 from django.urls import reverse
@@ -11,10 +11,25 @@ from urllib.parse import quote_plus, urlencode
 def index(request):
     this_week = date.today().isocalendar().week
     verse = Verse.objects.filter(week=this_week).first()
+    session = request.session.get("user")
+    verse_is_fav = None
+    if session:
+        sub = session['userinfo']['sub']
+        verse_is_fav = FavouriteVerses.objects.filter(user_sub=sub, week=this_week).first()
+        if request.method == "POST":
+            if verse_is_fav:
+                verse_is_fav.delete()
+                verse_is_fav = None
+            else:
+                verse_is_fav = FavouriteVerses(user_sub=sub, week=this_week)
+                verse_is_fav.save()
+                
+        
     context = {
         "verse": verse,
-        "session": request.session.get("user"),
-        "pretty": json.dumps(request.session.get("user"), indent=4),
+        "session": session,
+        "pretty": json.dumps(session, indent=4),
+        "verse_is_fav": ( "checked" if verse_is_fav else "")
     }
     return render(request, "bible_curious/index.html", context)
 

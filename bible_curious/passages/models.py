@@ -63,6 +63,13 @@ class Verse(models.Model):
         return f"({self.week}) {self.reading}"
 
 class Personalisation(models.Model):
-    user_id = models.CharField(max_length=100),
-    current_story = models.CharField(max_length=50),
-    current_step = models.IntegerField()
+    user_sub = models.CharField(max_length=100, default="")
+    current_story = models.CharField(max_length=50, default="")
+    current_step = models.IntegerField(default=0)
+
+class FavouriteVerses(models.Model):
+    """Remember the users' favourite verses"""
+    user_sub = models.CharField(max_length=100, default="")
+    week = models.IntegerField()
+    def  __str__(self) -> str:
+        return f"({self.user_sub}) {self.week}"
