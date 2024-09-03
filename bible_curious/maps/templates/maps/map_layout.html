@@ -34,6 +34,19 @@
             <a class="maps" href="./">
                 <h3>&larr; Maps</h3>
             </a>
+            <!-- login icon -->
+        {% if session %}
+        <div class="pfp_home">
+            <a href="profile">
+                <img src="{{session.userinfo.picture}}" alt="">
+            </a>
+        </div>
+        {% else %}
+        <div class="pfp_home">
+            <a class="login" href="/login">LOGIN</a>
+            
+        </div>
+        {% endif %}
             <h1>{{map_name}} map</h1>
             <img class="map_img" src="{{image_path}}/{{img_name}}" alt="{{map_name}}">
 

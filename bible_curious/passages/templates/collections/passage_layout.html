@@ -21,11 +21,11 @@
                 <img src="{% static 'images/church_black.svg' %}" alt="">
             </a>
             <a href="/collections">
-                <img src="{% static 'images/search_black.svg' %}"alt="">
+                <img src="{% static 'images/search_black.svg' %}" alt="">
             </a>
             <a href="/{{ story_href }}">
                 <div class="active five">
-                    <img src="{% static 'images/storyline_black.svg' %}"alt="">
+                    <img src="{% static 'images/storyline_black.svg' %}" alt="">
                 </div>
             </a>
         </div>
@@ -33,28 +33,39 @@
             <h3 class="back">
                 <a href="/{{ story_href }}">&larr; storyline</a>
             </h3>
+            <!-- login icon -->
+            {% if session %}
+            <div class="pfp_home">
+                <a href="profile">
+                    <img src="{{session.userinfo.picture}}" alt="">
+                </a>
+            </div>
+            {% else %}
+            <div class="pfp_home">
+                <a class="login" href="/login">LOGIN</a>
+            </div>
+            {% endif %}
             {% block content %}{% endblock content %}
-            
-
             <div class="step_nav">
                 {% if prev_exists %}
                 <a href="{{ prev_step }}">
                     <div class="prev">
-                        Prev<br>
-                        &larr; 
-                    </div>    
+                        Prev
+                        <br>
+                        &larr;
+                    </div>
                 </a>
                 {% endif %}
                 {% if next_exists %}
                 <a href="{{ next_step }}">
                     <div class="next">
-                        Next<br>
-                        &rarr; 
-                    </div>    
+                        Next
+                        <br>
+                        &rarr;
+                    </div>
                 </a>
                 {% endif %}
             </div>
-
         </div>
     </body>
 </html>

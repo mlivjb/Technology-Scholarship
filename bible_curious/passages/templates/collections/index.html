@@ -33,7 +33,18 @@
             <h3 class="back">
                 <a href="/">&larr; Home</a>
             </h3>
-
+            <!-- login icon -->
+            {% if session %}
+            <div class="pfp_home">
+                <a href="profile">
+                    <img src="{{session.userinfo.picture}}" alt="">
+                </a>
+            </div>
+            {% else %}
+            <div class="pfp_home">
+                <a class="login" href="/login">LOGIN</a>
+            </div>
+            {% endif %}
             <h1 class="head">Collections</h1>
             {% for collection in collections %}
             <a href="{{ collection.href }}">

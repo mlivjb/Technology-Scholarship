@@ -20,11 +20,14 @@ body {
 }
 
 .login {
-    display: inline-block;
-    overflow: none;
-    margin: 2%;
-    width: 55%;
-    background-color: var(--menubar-clr);
+    right: 4%;
+    top: 4%;
+    position: absolute;
+    padding: 20%;
+    border-radius: 10%;
+    background-color: var(--collection);
+    color: white;
+    font-size: 120%
 }
 
 div.pfp_home{
@@ -39,14 +42,6 @@ div.pfp_home{
     border-radius: 50%;
     margin: 0;
     padding: 0;
-}
-
-.pfp_home a {
-    font-size: 80%;
-}
-
-.pfp_home h3 {
-    margin: 0.2%;
 }
 
 div.logo {

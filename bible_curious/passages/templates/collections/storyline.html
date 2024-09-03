@@ -33,10 +33,21 @@
         <div class="content">
             <h3 class="back">
                 <a href="../{{collection_href}}">&larr; {{collection_name}}</a>
-                
             </h3>
-            <h1 class="head" class="head">{{story_name}}'s storyline</h1 class="head">
-            
+            <!-- login icon -->
+            {% if session %}
+            <div class="pfp_home">
+                <a href="profile">
+                    <img src="{{session.userinfo.picture}}" alt="">
+                </a>
+            </div>
+            {% else %}
+            <div class="pfp_home">
+                <a class="login" href="/login">LOGIN</a>
+            </div>
+            {% endif %}
+            <h1 class="head" class="head">{{story_name}}'s storyline
+            </h1 class="head">
             <!-- steps -->
             {% for step in steps %}
             <a href="/collections/{{step.href}}" class="step">
@@ -50,14 +61,12 @@
             </a>
             <div class="vl"></div>
             {% endfor %}
-
             <a href="/collections" class="step finished">
                 <div class="step_info">
                     <h2> Collections page</h2>
                     <h3>Well done! You have finished the {{story_name}} story!</h3>
                 </div>
             </a>
-
         </div>
     </body>
 </html>

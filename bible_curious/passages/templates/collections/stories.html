@@ -33,11 +33,23 @@
             <h3 class="back">
                 <a href="/collections">&larr; Collections</a>
             </h3>
-
-            <h1 class="head" class="head">{{collection_name}}</h1 class="head">
+            <!-- login icon -->
+            {% if session %}
+            <div class="pfp_home">
+                <a href="profile">
+                    <img src="{{session.userinfo.picture}}" alt="">
+                </a>
+            </div>
+            {% else %}
+            <div class="pfp_home">
+                <a class="login" href="/login">LOGIN</a>
+            </div>
+            {% endif %}
+            <h1 class="head" class="head">{{collection_name}}
+            </h1 class="head">
             <!-- stories -->
             {% for story in stories %}
-            <a href="{{story.href}}" >
+            <a href="{{story.href}}">
                 <div class="story_block {{story.name}}">
                     <h2>{{story.name}}</h2>
                 </div>

@@ -19,23 +19,30 @@ def index(request):
     return render(request, "bible_curious/index.html", context)
 
 def maps(request):
-    context = {}
+    context = {
+        "session": request.session.get("user"),
+    }
     return render(request, "bible_curious/maps.html", context)
 
 def notes(request):
-    context = {}
+    context = {
+        "session": request.session.get("user"),
+    }
     return render(request, "bible_curious/notes.html", context)
 
 def verse(request):
     this_week = date.today().isocalendar().week
     verse = Verse.objects.filter(week=this_week).first()
     context = {
+        "session": request.session.get("user"),
         "verse": verse
     }
     return render(request, "bible_curious/verse_info.html", context)
 
 def profile(request):
-    context = {}
+    context = {
+        "session": request.session.get("user"),
+    }
     return render(request, "bible_curious/profile.html", context)
 
 oauth = OAuth()
