@@ -56,10 +56,12 @@
                     <p class="ref">{{ verse.reading }} NIV</p>
                 </div>
             </a>
+            {% if session %}
             <form method="post">
-              {% csrf_token %}
-              <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }}/>Favourite
+            {% csrf_token %}
+            <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }}/>Favourite
             </form>
+            {% endif %}
             <h1>Your Stories</h1>
             {% if session %}
             <div class="current_stories_scroll">
