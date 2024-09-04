@@ -33,9 +33,10 @@
             <div class="logo">
                 <h3>hello</h3>
             </div>
+            <!-- login icon -->
             {% if session %}
             <div class="pfp_home">
-                <a href="profile">
+                <a href="/notes">
                     <img src="{{session.userinfo.picture}}" alt="">
                 </a>
             </div>
@@ -44,24 +45,25 @@
                 <a class="login" href="/login">LOGIN</a>
                 
             </div>
-            {% endif %}
-            
+            {% endif %}   
             
             <h1>Verse of the Week</h1>
-            <a href="/verse">
-                <div class="verse_of_the_week verse_{{ verse.group }}">
+            <div class="verse_of_the_week verse_{{ verse.group }}">
+                <a href="/verse">
                     <p>
                         {{ verse.verse }}
                     </p>
                     <p class="ref">{{ verse.reading }} NIV</p>
+                </a>
+                {% if session %}
+                <form method="post">
+                {% csrf_token %}
+                    <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }}/>
+                    <span class="star"></span>
+                </form>
+                {% endif %}
                 </div>
-            </a>
-            {% if session %}
-            <form method="post">
-            {% csrf_token %}
-            <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }}/>Favourite
-            </form>
-            {% endif %}
+
             <h1>Your Stories</h1>
             {% if session %}
             <div class="current_stories_scroll">
