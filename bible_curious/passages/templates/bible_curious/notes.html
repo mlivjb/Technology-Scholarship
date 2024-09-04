@@ -11,22 +11,22 @@
     <body>
         <!-- MENUBAR -->
         <div class="menubar">
-            <a href="/maps">
-                <img src="{% static 'images/map_black.svg' %}" alt="">
-            </a>
-            <a href="notes">
-                <div class="active two">
-                    <img src="{% static 'images/star_black.svg' %}" alt="">
-                </div>
-            </a>
             <a href="/">
-                <img src="{% static 'images/church_black.svg' %}" alt="">
-            </a>
-            <a href="collections">
-                <img src="{% static 'images/search_black.svg' %}" alt="">
+                <div>
+                    <img src="{% static 'images/church_black.svg' %}" alt="">
+                </div>
             </a>
             <a href="collections/leaders_of_the_bible/moses">
                 <img src="{% static 'images/storyline_black.svg' %}" alt="">
+            </a>
+            <a href="/collections">
+                <img src="{% static 'images/collections_icon.svg' %}" alt="">
+            </a>
+            <a href="/maps">
+                <img src="{% static 'images/map_black.svg' %}" alt="">
+            </a>
+            <a href="notes" class="active five">
+                <img src="{% static 'images/star_black.svg' %}" alt="">
             </a>
         </div>
         <div class="content">
@@ -75,7 +75,7 @@
             
             
             {% else %}
-            <h1>Me</h1>
+            <h1 class="head">Me</h1>
             <h3>To see your notes and favourited stuff login below</h3>
             <a href="/login">LOGIN</a>
             {% endif %}

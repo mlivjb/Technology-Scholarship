@@ -202,7 +202,7 @@ h2 {
 
 .active img{
     position: relative;
-    width: 85%;
+    width: 80%;
     padding: 7.5%;
 }
 
@@ -211,11 +211,11 @@ h2 {
 }
 
 .active.two {
-    left: 18%;
+    left: 20%;
 }
 
 .active.three {
-    left: 37%;
+    left: 38%;
 
 }
 
@@ -224,7 +224,7 @@ h2 {
 }
 
 .active.five {
-    left: 77%;
+    left:77%;
 }
 
 
