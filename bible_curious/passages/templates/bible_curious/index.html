@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{% static 'style.css' %}">
         <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     </head>
-    <body class="bg-logo">
+    <body>
         <!-- MENUBAR -->
         <div class="menubar">
             <a href="/">
@@ -29,12 +29,12 @@
                 <img src="{% static 'images/star_black.svg' %}" alt="">
             </a>
         </div>
-        <div class="content">
-            <div class="logo">
-                <h3>hello</h3>
-            </div>
-            <!-- login icon -->
-            {% if session %}
+        
+        <div class="logo user_header">
+            <a href="/">
+                <img src="{% static 'images/bc_logo.svg' %}" alt="">
+            </a>       
+        {% if session %}
             <div class="pfp_home">
                 <a href="/notes">
                     <img src="{{session.userinfo.picture}}" alt="">
@@ -45,7 +45,10 @@
                 <a class="login" href="/login">LOGIN</a>
                 
             </div>
-            {% endif %}   
+            {% endif %}
+        </div>
+        <div class="content church">
+            <!-- login icon -->
             
             <h1>Verse of the Week</h1>
             <div class="verse_of_the_week verse_{{ verse.group }}">

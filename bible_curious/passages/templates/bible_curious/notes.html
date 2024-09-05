@@ -31,13 +31,14 @@
         </div>
 
         {% if session %}
-        <div class="user_header">
+        <div class="user_header note">
             <div class="pfp_profile">
                 <a href="/notes">
                     <img class="profile" src="{{session.userinfo.picture}}" alt="">
                 </a>
             </div>
             <h2 class="username">{{session.userinfo.name}}</h2>
+            <h3>{{session.userinfo.email}}</h3>
             <a href="/logout">logout</a>
         </div>
         {% endif %}
@@ -45,7 +46,7 @@
         <div class="content">
 
             {% if session %}
-            <h2 class="head">Your Stuff</h2>
+            <h2>Your Stuff</h2>
 
             <h3>Favourite Verses</h3>
             <div class="current_stories_scroll">
