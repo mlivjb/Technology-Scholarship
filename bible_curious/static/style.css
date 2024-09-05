@@ -25,7 +25,6 @@ body {
     position: absolute;
     padding: 10%;
     border-radius: 10%;
-    background-color: var(--collection);
     color: white;
     font-size: 120%
 }
