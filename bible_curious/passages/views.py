@@ -7,6 +7,7 @@ import datetime
 
 def index(request):
     context = {
+        "session": request.session.get("user"),
         "collections": [
             {
                 "name": collection.name, 
@@ -26,6 +27,7 @@ def stories(collection_name):
     collections_stories = Story.objects.filter(collection__name=collection_name)
     def stories_href(request):
         context = {
+            "session": request.session.get("user"),
             "collection_name": collection_name,
             "stories": [
                 {
@@ -44,6 +46,7 @@ def storyline(story_name):
     stories_steps = Step.objects.filter(story__name=story_name)
     def steps_href(request):
         context = {
+            "session": request.session.get("user"),
             "collection_name": stories_steps[0].story.collection.name,
             "collection_href": stories_steps[0].story.collection.calculate_href(),
             "story_name": story_name,
@@ -68,6 +71,7 @@ def step(story_name, num):
     the_step = story_steps[num - 1]
     def step_href(request):
         context = {
+            "session": request.session.get("user"),
             "collection_name": the_step.story.collection.name,
             "collection_href": the_step.story.collection.calculate_href(),
             "story_href": "collections/" + the_step.story.calculate_href(),

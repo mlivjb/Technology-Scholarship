@@ -7,6 +7,7 @@ from .models import Map
 
 def index(request):
     context = {
+            "session": request.session.get("user"),
         "maps": [
             {
                 "name": map_collection.name, 
@@ -24,6 +25,7 @@ def map(map_name):
     maps = Map.objects.filter(name=map_name).first()
     def maps_href(request):
         context = {
+            "session": request.session.get("user"),
             "map_name": map_name,
             "img_name": maps.calculate_href() + ".png"
         }

@@ -36,13 +36,13 @@
             </a>
             <!-- login icon -->
         {% if session %}
-        <div class="pfp_home">
+        <div class="pfp">
             <a href="profile">
                 <img src="{{session.userinfo.picture}}" alt="">
             </a>
         </div>
         {% else %}
-        <div class="pfp_home">
+        <div class="pfp">
             <a class="login" href="/login">LOGIN</a>
             
         </div>
