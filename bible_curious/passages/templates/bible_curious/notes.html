@@ -29,32 +29,22 @@
                 <img src="{% static 'images/star_black.svg' %}" alt="">
             </a>
         </div>
-        <div class="content">
-            <h3 class="back">
-                <a href="/">&larr; Home</a>
-            </h3>
-            <!-- login icon -->
-            <!-- {% if session %}
-            <div class="pfp_home">
-                <a href="profile">
-                    <img src="{{session.userinfo.picture}}" alt="">
-                </a>
-            </div>
-            {% else %}
-            <div class="pfp_home">
-                <a class="login" href="/login">LOGIN</a>
-            </div>
-            {% endif %} -->
 
-
-            {% if session %}
+        {% if session %}
+        <div class="user_header">
             <div class="pfp_profile">
                 <a href="/notes">
                     <img class="profile" src="{{session.userinfo.picture}}" alt="">
                 </a>
             </div>
-            <h2 class="username head">{{session.userinfo.name}}</h2>
+            <h2 class="username">{{session.userinfo.name}}</h2>
             <a href="/logout">logout</a>
+        </div>
+        {% endif %}
+
+        <div class="content">
+
+            {% if session %}
             <h2 class="head">Your Stuff</h2>
 
             <h3>Favourite Verses</h3>
@@ -69,13 +59,9 @@
             </div>
 
             
-            
-            
-            
-            
-            
+        
             {% else %}
-            <h1 class="head">Me</h1>
+            <h1 class="head">Your Stuff</h1>
             <h3>To see your notes and favourited stuff login below</h3>
             <a href="/login">LOGIN</a>
             {% endif %}

@@ -137,13 +137,14 @@ p {
     margin-top: 12%;
 }
 
-h2.user{
-    right: 0;
-    margin: 0;
+div.user_header {
+    background-color: yellow;
     width: 100%;
-    padding: 0;
-    margin-bottom: 10%;
-    font-weight: lighter;
+    height: auto;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-color: red 5px solid;
+    color: #08415c;
 }
 
 ::-webkit-scrollbar {

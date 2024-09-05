@@ -13,11 +13,9 @@ def index(request):
     verse = Verse.objects.filter(week=this_week).first()
     session = request.session.get("user")
     verse_is_fav = None
-    # map_is_fav = None
     if session:
         sub = session['userinfo']['sub']
         verse_is_fav = FavouriteVerses.objects.filter(user_sub=sub, week=this_week).first()
-        # map_is_fav = FavouriteMaps.objects.filter(user_sub=sub, name=map.__name__)
         if request.method == "POST":
             if verse_is_fav:
                 verse_is_fav.delete()
@@ -25,12 +23,6 @@ def index(request):
             else:
                 verse_is_fav = FavouriteVerses(user_sub=sub, week=this_week)
                 verse_is_fav.save()
-            # if map_is_fav:
-            #     map_is_fav.delete()
-            #     map_is_fav = None
-            # else:
-            #     map_is_fav = FavouriteMaps(user_sub=sub, name=map.__name__)
-            #     map_is_fav.save()
                 
         
     context = {
