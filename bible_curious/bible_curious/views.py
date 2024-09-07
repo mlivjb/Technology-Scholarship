@@ -40,8 +40,16 @@ def maps(request):
     return render(request, "bible_curious/maps.html", context)
 
 def notes(request):
+    session = request.session.get("user")
+    if session:
+        sub = session['userinfo']['sub']
+        all_my_fav_weeks = [ fv.week for fv in FavouriteVerses.objects.filter(user_sub=sub) ]
+        my_fav_verses = Verse.objects.filter(week__in=all_my_fav_weeks)
+    else:
+        my_fav_verses = []
     context = {
         "session": request.session.get("user"),
+        "my_fav_verses": my_fav_verses,
     }
     return render(request, "bible_curious/notes.html", context)
 
