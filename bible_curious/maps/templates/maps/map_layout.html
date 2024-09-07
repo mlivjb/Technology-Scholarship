@@ -47,7 +47,16 @@
             
         </div>
         {% endif %}
-            <h1>{{map_name}} map</h1>
+            <h1>{{map_name}} map
+                {% if session %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="checkbox" name="fav_map" onClick="form.submit()" value="1" {{ map_is_fav }}/>
+                    <span class="star"></span>
+                </form>
+                {% endif %}
+            </h1>
+            
             <img class="map_img" src="{{image_path}}/{{img_name}}" alt="{{map_name}}">
 
 

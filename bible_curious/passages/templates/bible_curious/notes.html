@@ -69,6 +69,17 @@
                     <!-- </a> -->
                 {% endfor %}
             </div>
+
+            <h3>Favourite Maps</h3>
+            <div class="current_stories_scroll">
+                {% for map in my_fav_maps %}
+                    <!-- <a href="{{ collection.href }}"> -->
+                        <div class="collection_block">
+                            <h4><a href="/">{{map.name}}</a></h4>
+                        </div>
+                    <!-- </a> -->
+                {% endfor %}
+            </div>
         
             {% else %}
             <h1 class="head">Your Stuff</h1>

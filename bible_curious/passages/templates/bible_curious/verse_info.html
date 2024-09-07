@@ -54,6 +54,13 @@
                 <p>
                     {{ verse.verse }}
                 </p>
+                {% if session %}
+                <form method="post">
+                {% csrf_token %}
+                    <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }}/>
+                    <span class="star"></span>
+                </form>
+                {% endif %}
                 <p>{{ verse.reading }} NIV</p>
             </div>
             <!-- explanation -->

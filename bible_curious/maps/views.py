@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
-from .models import Map
+from .models import Map, FavouriteMap
 
 
 # Create your views here.
 
 def index(request):
     context = {
-            "session": request.session.get("user"),
+        "session": request.session.get("user"),
         "maps": [
             {
                 "name": map_collection.name, 
@@ -21,13 +21,27 @@ def index(request):
     return render(request, f"maps/index.html", context)
 
 def map(map_name):
-    # look up collection object with a matching name
-    maps = Map.objects.filter(name=map_name).first()
+    
     def maps_href(request):
+        # look up collection object with a matching name
+        maps = Map.objects.filter(name=map_name).first()
+        session = request.session.get("user")
+        map_is_fav = None
+        if session:
+            sub = session['userinfo']['sub']
+            map_is_fav = FavouriteMap.objects.filter(user_sub=sub, name=map_name).first()
+            if request.method == "POST":
+                if map_is_fav:
+                    map_is_fav.delete()
+                    map_is_fav = None
+                else:
+                    map_is_fav = FavouriteMap(user_sub=sub, name=map_name)
+                    map_is_fav.save()
         context = {
             "session": request.session.get("user"),
             "map_name": map_name,
-            "img_name": maps.calculate_href() + ".png"
+            "img_name": maps.calculate_href() + ".png",
+            "map_is_fav": ( "checked" if map_is_fav else "")
         }
         return render(request, f"maps/map_layout.html", context)
     return maps_href

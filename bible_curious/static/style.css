@@ -97,6 +97,12 @@ form input {
     background-size: auto;
 }
 
+.star + .story {
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+}
+
 form input:checked ~ .star {
     /* background-color: yellow; */
     background-image: url(images/star_yellow.svg);

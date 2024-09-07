@@ -64,9 +64,22 @@ def notes(request):
 def verse(request):
     this_week = date.today().isocalendar().week
     verse = Verse.objects.filter(week=this_week).first()
+    session = request.session.get("user")
+    verse_is_fav = None
+    if session:
+        sub = session['userinfo']['sub']
+        verse_is_fav = FavouriteVerses.objects.filter(user_sub=sub, week=this_week).first()
+        if request.method == "POST":
+            if verse_is_fav:
+                verse_is_fav.delete()
+                verse_is_fav = None
+            else:
+                verse_is_fav = FavouriteVerses(user_sub=sub, week=this_week)
+                verse_is_fav.save()
     context = {
         "session": request.session.get("user"),
-        "verse": verse
+        "verse": verse,
+        "verse_is_fav": ( "checked" if verse_is_fav else "")
     }
     return render(request, "bible_curious/verse_info.html", context)
 

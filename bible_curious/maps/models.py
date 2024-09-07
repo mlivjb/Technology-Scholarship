@@ -9,3 +9,11 @@ class Map(models.Model):
     
     def calculate_href(self):
         return f"{self.name}".replace(" ", "_").lower()
+    
+    
+class FavouriteMap(models.Model):
+    """Remember the users' favourite map"""
+    user_sub = models.CharField(max_length=100, default="")
+    name = models.CharField(max_length=50, default="")
+    def  __str__(self) -> str:
+        return f"({self.user_sub}) {self.name}"

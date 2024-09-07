@@ -32,14 +32,16 @@
         <div class="content">
             <h3 class="back">
                 <a href="/{{ story_href }}">&larr; storyline</a>
+                {% if session %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="checkbox" name="fav_step" onClick="form.submit()" value="1" {{ step_is_fav }}/>
+                    <span class="star story"></span>
+                </form>
+                {% endif %}
             </h3>
             <!-- login icon -->
             {% if session %}
-            <form method="post">
-              {% csrf_token %}
-              <input type="checkbox" name="fav_step" onClick="form.submit()" value="1" {{ step_is_fav }}/>
-              <span class="star"></span>
-            </form>
             <div class="pfp">
                 <a href="/notes">
                     <img src="{{session.userinfo.picture}}" alt="">
@@ -51,7 +53,10 @@
                 <a class="login" href="/login">LOGIN</a>
             </div>
             {% endif %}
-            {% block content %}{% endblock content %}
+            
+            {% block content %}
+                    
+            {% endblock content %}
             <div class="step_nav">
                 {% if prev_exists %}
                 <a href="{{ prev_step }}">
