@@ -74,6 +74,14 @@ class FavouriteVerses(models.Model):
     def  __str__(self) -> str:
         return f"({self.user_sub}) {self.week}"
     
+class FavouriteStep(models.Model):
+    """Remember the users' favourite step"""
+    user_sub = models.CharField(max_length=100, default="")
+    story_name = models.CharField(max_length=50, default="")
+    step_number = models.IntegerField()
+    def  __str__(self) -> str:
+        return f"({self.user_sub}) {self.story_name}-{self.step_number}"
+    
 class FavouriteMaps(models.Model):
     """Remember the users' favourite verses"""
     user_sub = models.CharField(max_length=100, default="")

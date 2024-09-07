@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse, render, redirect
 from datetime import date, datetime
-from passages.models import Verse, FavouriteVerses, FavouriteMaps
+from passages.models import Verse, FavouriteVerses, FavouriteMaps, FavouriteStep, Step
 from authlib.integrations.django_client import OAuth
 from django.conf import settings
 from django.urls import reverse
@@ -45,11 +45,19 @@ def notes(request):
         sub = session['userinfo']['sub']
         all_my_fav_weeks = [ fv.week for fv in FavouriteVerses.objects.filter(user_sub=sub) ]
         my_fav_verses = Verse.objects.filter(week__in=all_my_fav_weeks)
+        all_my_fav_steps = [ (fv.step_number, fv.story_name) for fv in FavouriteStep.objects.filter(user_sub=sub) ]
+        my_fav_steps = [
+            Step.objects.filter(step_number=step_number, story__name=story_name).first()
+            for (step_number, story_name)
+            in all_my_fav_steps
+        ]
     else:
         my_fav_verses = []
+        my_fav_steps = []
     context = {
         "session": request.session.get("user"),
         "my_fav_verses": my_fav_verses,
+        "my_fav_steps": my_fav_steps,
     }
     return render(request, "bible_curious/notes.html", context)
 

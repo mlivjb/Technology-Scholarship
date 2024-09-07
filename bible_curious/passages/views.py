@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse, render
 
-from .models import Collection, Story, Step
+from .models import Collection, Story, Step, FavouriteStep
 
 import datetime
 
@@ -69,7 +69,21 @@ def step(story_name, num):
     # look up stories object with a matching name
     story_steps = Step.objects.filter(story__name = story_name).order_by('step_number')
     the_step = story_steps[num - 1]
+    
     def step_href(request):
+        session = request.session.get("user")
+        step_is_fav = None
+        if session:
+            sub = session['userinfo']['sub']
+            step_is_fav = FavouriteStep.objects.filter(user_sub=sub, story_name=story_name, step_number=num).first()
+            if request.method == "POST":
+                if step_is_fav:
+                    step_is_fav.delete()
+                    step_is_fav = None
+                else:
+                    step_is_fav = FavouriteStep(user_sub=sub, story_name=story_name, step_number=num)
+                    step_is_fav.save()
+                    
         context = {
             "session": request.session.get("user"),
             "collection_name": the_step.story.collection.name,
@@ -82,7 +96,8 @@ def step(story_name, num):
             "next_step": num + 1,
             "prev_step": num - 1,
             "prev_exists": num > 1,
-            "next_exists": num < story_steps.count()
+            "next_exists": num < story_steps.count(),
+            "step_is_fav": ( "checked" if step_is_fav else ""),
         }
         return render(request, f"collections/{story_name}/{num}.html", context)
             

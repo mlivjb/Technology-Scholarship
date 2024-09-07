@@ -35,11 +35,17 @@
             </h3>
             <!-- login icon -->
             {% if session %}
+            <form method="post">
+              {% csrf_token %}
+              <input type="checkbox" name="fav_step" onClick="form.submit()" value="1" {{ step_is_fav }}/>
+              <span class="star"></span>
+            </form>
             <div class="pfp">
                 <a href="/notes">
                     <img src="{{session.userinfo.picture}}" alt="">
                 </a>
             </div>
+            
             {% else %}
             <div class="pfp">
                 <a class="login" href="/login">LOGIN</a>

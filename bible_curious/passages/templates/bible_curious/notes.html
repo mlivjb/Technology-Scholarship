@@ -59,6 +59,16 @@
             </div>
 
             
+            <h3>Favourite Steps</h3>
+            <div class="current_stories_scroll">
+                {% for step in my_fav_steps %}
+                    <!-- <a href="{{ collection.href }}"> -->
+                        <div class="collection_block">
+                            <h4><a href="/collections/{{ step.calculate_href }}">{{step.story.name}} - {{step.name}}</a></h4>
+                        </div>
+                    <!-- </a> -->
+                {% endfor %}
+            </div>
         
             {% else %}
             <h1 class="head">Your Stuff</h1>
