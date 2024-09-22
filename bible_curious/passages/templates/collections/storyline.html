@@ -46,8 +46,10 @@
                 <a class="login" href="/login">LOGIN</a>
             </div>
             {% endif %}
+
+            {% if session %}
             <h1 class="head" class="head">{{story_name}}'s storyline
-            </h1 class="head">
+            </h1>
             <!-- steps -->
             {% for step in steps %}
             <a href="/collections/{{step.href}}" class="step">
@@ -67,6 +69,9 @@
                     <h3>Well done! You have finished the {{story_name}} story!</h3>
                 </div>
             </a>
+            {% endif %}
+
+            
         </div>
     </body>
 </html>

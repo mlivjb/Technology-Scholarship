@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse, render
 
-from .models import Collection, Story, Step, FavouriteStep
+from .models import Collection, Story, Step, FavouriteStep, LastStoryline
 
 import datetime
 
@@ -45,6 +45,17 @@ def storyline(story_name):
     # look up stories object with a matching name
     stories_steps = Step.objects.filter(story__name=story_name)
     def steps_href(request):
+        session = request.session.get("user")
+        if session:
+            sub = session['userinfo']['sub']
+            last_storyline = LastStoryline.objects.filter(story_name=story_name)
+            if last_storyline:
+                last_storyline = LastStoryline(user_sub=sub, story__name=story_name)
+                last_storyline.save()
+            else:
+                LastStoryline.story_name = "Moses"
+                last_storyline = LastStoryline.objects.filter(story_name=story_name)
+
         context = {
             "session": request.session.get("user"),
             "collection_name": stories_steps[0].story.collection.name,
@@ -61,6 +72,7 @@ def storyline(story_name):
                 for step 
                 in stories_steps.order_by("step_number")
             ],
+            "last_storyline": last_storyline
         }
         return render(request, f"collections/storyline.html", context)
     return steps_href

@@ -88,4 +88,11 @@ class FavouriteMaps(models.Model):
     name = models.CharField(max_length=50)
     def  __str__(self) -> str:
         return f"({self.user_sub}) {self.name}"
+
+class LastStoryline(models.Model):
+    """ remember the users' last storyline"""
+    user_sub = models.CharField(max_length=100, default="")
+    story_name = models.CharField(max_length=50)
+    def  __str__(self) -> str:
+        return f"({self.user_sub}) {self.story_name}"
     

@@ -29,7 +29,6 @@
                 <img src="{% static 'images/star_black.svg' %}" alt="">
             </a>
         </div>
-
         {% if session %}
         <div class="user_header note">
             <div class="pfp_profile">
@@ -42,45 +41,40 @@
             <a href="/logout">logout</a>
         </div>
         {% endif %}
-
         <div class="content">
             {% if session %}
             <h2>Your Stuff</h2>
-
             <h3>Favourite Verses</h3>
-            <div class="current_stories_scroll">
-                {% for verse in my_fav_verses %}
-                    <!-- <a href="{{ collection.href }}"> -->
-                        <div class="collection_block">
-                            <h4>{{verse.reading}}</h4>
-                        </div>
-                    <!-- </a> -->
-                {% endfor %}
+            {% for verse in my_fav_verses %}
+            <div class="sections fav_verse">
+                <label for="{{verse.week}}">
+                    <h4> &darr; {{verse.reading}}</h4>
+                </label>
+                <input type="checkbox" id="{{verse.week}}" style="display:none;">
+                <div id="hidden" class="explanation">
+                    {{verse.verse}}
+                </div>
             </div>
-
-            
+            {% endfor %}
             <h3>Favourite Steps</h3>
-            <div class="current_stories_scroll">
-                {% for step in my_fav_steps %}
-                    <!-- <a href="{{ collection.href }}"> -->
-                        <div class="collection_block">
-                            <h4><a href="/collections/{{ step.calculate_href }}">{{step.story.name}} - {{step.name}}</a></h4>
-                        </div>
-                    <!-- </a> -->
-                {% endfor %}
+            {% for step in my_fav_steps %}
+            <!-- <a href="{{ collection.href }}"> -->
+            <div class="collection_block">
+                <h4>
+                    <a href="/collections/{{ step.calculate_href }}">{{step.story.name}} - {{step.name}}</a>
+                </h4>
             </div>
-
+            <!-- </a> -->
+            {% endfor %}
             <h3>Favourite Maps</h3>
-            <div class="current_stories_scroll">
-                {% for map in my_fav_maps %}
-                    <!-- <a href="{{ collection.href }}"> -->
-                        <div class="collection_block">
-                            <h4><a href="/">{{map.name}}</a></h4>
-                        </div>
-                    <!-- </a> -->
-                {% endfor %}
+            {% for map in my_fav_maps %}
+            <div class="collection_block">
+                <h4>
+                    <a href="/">{{map.name}}</a>
+                </h4>
             </div>
-        
+            {% endfor %}
+            
             {% else %}
             <h1 class="head">Your Stuff</h1>
             <h3>To see your notes and favourited stuff login below</h3>
