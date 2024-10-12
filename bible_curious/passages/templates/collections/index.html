@@ -11,28 +11,29 @@
     <body>
         <!-- MENUBAR -->
         <div class="menubar">
+            <span class="active three"></span>
             <a href="/">
-                <img src="{% static 'images/church_black.svg' %}" alt="">
+                <img src="{% static 'images/church_white.svg' %}" alt="">
             </a>
             <a href="leaders_of_the_bible/moses">
-                <img src="{% static 'images/storyline_black.svg' %}" alt="">
+                <img src="{% static 'images/storyline_white.svg' %}" alt="">
             </a>
             <a href="">
-                <div class="active three">
-                    <img src="{% static 'images/collections_icon.svg' %}" alt="">
-                </div>
+                    <img src="{% static 'images/collections_icon_white.svg' %}" alt="">
             </a>
             <a href="/maps">
-                <img src="{% static 'images/map_black.svg' %}" alt="">
+                <img src="{% static 'images/map_white.svg' %}" alt="">
             </a>
             <a href="/notes">
-                <img src="{% static 'images/star_black.svg' %}" alt="">
+                <img src="{% static 'images/star_white.svg' %}" alt="">
             </a>
         </div>
-        <div class="content">
-            <h3 class="back">
+        <div class="back">
+            <h3>
                 <a href="/">&larr; Home</a>
             </h3>
+        </div>
+        <div class="content">
             <!-- login icon -->
             {% if session %}
             <div class="pfp">

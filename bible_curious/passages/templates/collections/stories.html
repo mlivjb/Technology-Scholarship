@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>bible curious | {{collection_name}}</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-        <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
-    </head>
-    <body>
-        <!-- MENUBAR -->
-        <div class="menubar">
-            <a href="/">
-                <img src="{% static 'images/church_black.svg' %}" alt="">
-            </a>
-            <a href="leaders_of_the_bible/moses">
-                <img src="{% static 'images/storyline_black.svg' %}" alt="">
-            </a>
-            <a href="./">
-                <div class="active three">
-                    <img src="{% static 'images/collections_icon.svg' %}" alt="">
-                </div>
-            </a>
-            <a href="/maps">
-                <img src="{% static 'images/map_black.svg' %}" alt="">
-            </a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bible curious | {{collection_name}}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+</head>
+
+<body>
+    <!-- MENUBAR -->
+    <div class="menubar">
+        <span class="active three"></span>
+        <a href="/">
+            <img src="{% static 'images/church_white.svg' %}" alt="">
+        </a>
+        <a href="leaders_of_the_bible/moses">
+            <img src="{% static 'images/storyline_white.svg' %}" alt="">
+        </a>
+        <a href="./">
+            <img src="{% static 'images/collections_icon_white.svg' %}" alt="">
+        </a>
+        <a href="/maps">
+            <img src="{% static 'images/map_white.svg' %}" alt="">
+        </a>
+        <a href="/notes">
+            <img src="{% static 'images/star_white.svg' %}" alt="">
+        </a>
+    </div>
+    <div class="back">
+        <h3>
+            <a href="/collections">&larr; Collections</a>
+        </h3>
+    </div>
+    <div class="content">
+        <!-- login icon -->
+        {% if session %}
+        <div class="pfp">
             <a href="/notes">
-                <img src="{% static 'images/star_black.svg' %}" alt="">
+                <img src="{{session.userinfo.picture}}" alt="">
             </a>
         </div>
-        <div class="content">
-            <h3 class="back">
-                <a href="/collections">&larr; Collections</a>
-            </h3>
-            <!-- login icon -->
-            {% if session %}
-            <div class="pfp">
-                <a href="/notes">
-                    <img src="{{session.userinfo.picture}}" alt="">
-                </a>
-            </div>
-            {% else %}
-            <div class="pfp">
-                <a class="login" href="/login">LOGIN</a>
-            </div>
-            {% endif %}
-            <h1 class="head" class="head">{{collection_name}}
-            </h1 class="head">
-            <!-- stories -->
-            {% for story in stories %}
-            <a href="{{story.href}}">
-                <div class="story_block {{story.name}}">
-                    <h2>{{story.name}}</h2>
-                </div>
-            </a>
-            {% endfor %}
+        {% else %}
+        <div class="pfp">
+            <a class="login" href="/login">LOGIN</a>
         </div>
-    </body>
+        {% endif %}
+        <h1 class="head" class="head">{{collection_name}}
+        </h1 class="head">
+        <!-- stories -->
+        {% for story in stories %}
+        <a href="{{story.href}}">
+            <div class="story_block {{story.name}}">
+                <h2>{{story.name}}</h2>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</body>
+
 </html>

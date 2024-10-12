@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>bible curious | Home</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-        <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
-    </head>
-    <body>
-        <!-- MENUBAR -->
-        <div class="menubar">
-            <a href="/">
-                <div class="active one">
-                    <img src="{% static 'images/church_black.svg' %}" alt="">
-                </div>
-            </a>
-            <a href="collections/leaders_of_the_bible/moses">
-                <img src="{% static 'images/storyline_black.svg' %}" alt="">
-            </a>
-            <a href="/collections">
-                <img src="{% static 'images/collections_icon.svg' %}" alt="">
-            </a>
-            <a href="/maps">
-                <img src="{% static 'images/map_black.svg' %}" alt="">
-            </a>
-            <a href="notes">
-                <img src="{% static 'images/star_black.svg' %}" alt="">
-            </a>
-        </div>
-        
-        <div class="logo user_header">
-            <a href="/">
-                <img src="{% static 'images/bc_logo.svg' %}" alt="">
-            </a>       
-        {% if session %}
-            <div class="pfp_home">
-                <a href="/notes">
-                    <img src="{{session.userinfo.picture}}" alt="">
-                </a>
-            </div>
-            {% else %}
-            <div class="pfp_home">
-                <a class="login" href="/login">LOGIN</a>
-                
-            </div>
-            {% endif %}
-        </div>
-        <div class="content church">
-            <!-- login icon -->
-            
-            <h1>Verse of the Week</h1>
-            <div class="verse_of_the_week verse_{{ verse.group }}">
-                <a href="/verse">
-                    <p>
-                        {{ verse.verse }}
-                    </p>
-                    <p class="ref">{{ verse.reading }} NIV</p>
-                </a>
-                {% if session %}
-                <form method="post">
-                {% csrf_token %}
-                    <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }}/>
-                    <span class="star"></span>
-                </form>
-                {% endif %}
-                </div>
 
-            <h1>Your Stories</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bible curious | Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+</head>
+
+<body>
+    <!-- MENUBAR -->
+    <div class="menubar">
+        <span class="active one"></span>
+        <a href="/">
+            <img src="{% static 'images/church_white.svg' %}" alt="">
+        </a>
+        <a href="collections/leaders_of_the_bible/moses">
+            <img src="{% static 'images/storyline_white.svg' %}" alt="">
+        </a>
+        <a href="/collections">
+            <img src="{% static 'images/collections_icon_white.svg' %}" alt="">
+        </a>
+        <a href="/maps">
+            <img src="{% static 'images/map_white.svg' %}" alt="">
+        </a>
+        <a href="notes">
+            <img src="{% static 'images/star_white.svg' %}" alt="">
+        </a>
+    </div>
+
+    <div class="user_header">
+        <a href="/">
+            <img src="{% static 'images/bc_logo.svg' %}" alt="">
+        </a>
+        {% if session %}
+        <div class="pfp">
+            <a href="/notes">
+                <img src="{{session.userinfo.picture}}" alt="">
+            </a>
+        </div>
+        {% else %}
+        <div class="pfp">
+            <a class="login" href="/login">LOGIN</a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="content church">
+        <!-- login icon -->
+
+        <h1>Verse of the Week</h1>
+        <div class="verse_of_the_week verse_{{ verse.group }}">
+            <a href="/verse">
+                <p>
+                    {{ verse.verse }}
+                </p>
+                <p class="ref">{{ verse.reading }} NIV</p>
+            </a>
             {% if session %}
-            <div class="current_stories_scroll">
-                <div class="current_story_block">
-                    <a class="c_s_story Moses" href="collections/leaders_of_the_bible/moses">
-                        Moses
-                    </a>
-                    <a class="c_s_collection" href="collections/leaders_of_the_bible">Leaders of the Bible</a>
-                </div>
-                <div class="current_story_block">
-                    <a class="c_s_story Ruth" href="collections/women_in_the_bible/ruth">
-                        Ruth
-                    </a>
-                    <a class="c_s_collection" href="collections/women_in_the_bible">Women in the Bible</a>
-                </div>
-                <div class="current_story_block">
-                    <a class="c_s_story" href="collections/">
-                        Intro 1
-                    </a>
-                    <a class="c_s_collection" href="collections/leaders_of_the_bible">Intro to the Bible</a>
-                </div>
-            </div>
-            {% else %}
-            <a href="/login">LOGIN</a> to see Your Stories
+            <form method="post">
+                {% csrf_token %}
+                <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }} />
+                <span class="star"></span>
+            </form>
             {% endif %}
         </div>
-    </body>
+
+        <h1>Your Stories</h1>
+        {% if session %}
+        <div class="current_stories_scroll">
+            <div class="current_story_block">
+                <a class="c_s_story Moses" href="collections/leaders_of_the_bible/moses">
+                    Moses
+                </a>
+                <a class="c_s_collection" href="collections/leaders_of_the_bible">Leaders of the Bible</a>
+            </div>
+            <div class="current_story_block">
+                <a class="c_s_story Ruth" href="collections/women_in_the_bible/ruth">
+                    Ruth
+                </a>
+                <a class="c_s_collection" href="collections/women_in_the_bible">Women in the Bible</a>
+            </div>
+            <div class="current_story_block">
+                <a class="c_s_story" href="collections/">
+                    Intro 1
+                </a>
+                <a class="c_s_collection" href="collections/leaders_of_the_bible">Intro to the Bible</a>
+            </div>
+        </div>
+        {% else %}
+        <a href="/login">LOGIN</a> to see Your Stories
+        {% endif %}
+    </div>
+</body>
+
 </html>
