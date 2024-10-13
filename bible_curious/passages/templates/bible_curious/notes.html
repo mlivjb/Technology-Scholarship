@@ -29,7 +29,7 @@
             </a>
         </div>
         {% if session %}
-        <div class="user_header note">
+        <div class="note">
             <div class="pfp_profile">
                 <a href="/notes">
                     <img class="profile" src="{{session.userinfo.picture}}" alt="">
@@ -42,7 +42,7 @@
         {% endif %}
         <div class="content">
             {% if session %}
-            <h2>Your Stuff</h2>
+            <h2 >Your Stuff</h2>
             <h3>Favourite Verses</h3>
             {% for verse in my_fav_verses %}
             <div class="sections fav_verse">

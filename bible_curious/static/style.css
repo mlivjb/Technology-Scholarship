@@ -136,7 +136,22 @@ div.user_header {
     background-color: var(--menubar-clr);
 }
 
-.user_header a {
+div.note {
+    background-color: var(--menubar-clr);
+    top: 0;
+    width: 90%;
+    padding: 5% 5% 10%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.note a {
+    color: var(--collection);
+    font-size: 100%;
+    text-decoration: underline;
+}
+
+.user_header a{
     color: var(--collection);
     font-size: 100%;
     text-decoration: underline;
@@ -149,15 +164,20 @@ img.logo {
     left: 25%;
 }
 
-.user_header h3 {
+.note h3 {
+    margin: 0;
+    font-size: 80%;
+    color: var(--collection);
+}
+
+.user_header h3{
     margin: 0;
     font-size: 80%;
 }
 
-
 .church {
     padding-top: 0;
-    margin-top: 30%;
+    margin-top: 35%;
 }
 
 div.pfp_profile {
@@ -176,10 +196,10 @@ img.profile {
     padding: 0;
 }
 
-
 h2.username {
     margin: 2% 0 0 0;
     padding-top: 0;
+    color: var(--collection);
 }
 
 ::-webkit-scrollbar {
