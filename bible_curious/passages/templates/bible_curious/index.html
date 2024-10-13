@@ -32,8 +32,8 @@
     </div>
 
     <div class="user_header">
-        <a href="/">
-            <img src="{% static 'images/bc_logo.svg' %}" alt="">
+        <a href="/" >
+            <img class="logo" src="{% static 'images/bc_logo.svg' %}" alt="">
         </a>
         {% if session %}
         <div class="pfp">
@@ -47,10 +47,10 @@
         </div>
         {% endif %}
     </div>
-    <div class="content church">
+    <div class="content">
         <!-- login icon -->
 
-        <h1>Verse of the Week</h1>
+        <h1 class="church">Verse of the Week</h1>
         <div class="verse_of_the_week verse_{{ verse.group }}">
             <a href="/verse">
                 <p>

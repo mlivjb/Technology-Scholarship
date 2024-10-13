@@ -128,16 +128,12 @@ p {
 }
 
 div.user_header {
+    position: fixed;
+    height: 10%;
+    top: 0;
+    width: 95%;
+    padding: 2% 0 0 5%;
     background-color: var(--menubar-clr);
-    width: 90%;
-    height: auto;
-    margin-top: 0;
-    color: var(--collection);
-    padding: 5%;
-    box-shadow: var(--shadow) 3px 4px 7px 0;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    padding-bottom: 5%;
 }
 
 .user_header a {
@@ -146,9 +142,22 @@ div.user_header {
     text-decoration: underline;
 }
 
-.church h1 {
+img.logo {
+    width: 40%;
+    padding: 0;
+    position: absolute;
+    left: 25%;
+}
+
+.user_header h3 {
+    margin: 0;
+    font-size: 80%;
+}
+
+
+.church {
     padding-top: 0;
-    margin-top: 0;
+    margin-top: 30%;
 }
 
 div.pfp_profile {
@@ -167,15 +176,6 @@ img.profile {
     padding: 0;
 }
 
-.user_header img {
-    width: 60%;
-    padding: 0;
-}
-
-.user_header h3 {
-    margin: 0;
-    font-size: 80%;
-}
 
 h2.username {
     margin: 2% 0 0 0;
