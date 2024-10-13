@@ -81,31 +81,30 @@ form input {
     cursor: pointer;
     height: 30px;
     width: 30px;
+    z-index: 2;
+}
+
+.star+.versefav{
     bottom: 15%;
     right: 5%;
-    z-index: 2;
 }
 
 .star {
     position: absolute;
-    bottom: 15%;
-    right: 5%;
     height: 30px;
     width: 30px;
-    /* background-color: red; */
     z-index: 1;
     background-image: url(images/star_white.svg);
     background-size: auto;
 }
 
-.star+.story {
-    position: absolute;
-    bottom: 15%;
-    left: 40%;
+span.star.story {
+    z-index: 2;
+    top: 2.5%;
+    right: 24%;
 }
 
 form input:checked~.star {
-    /* background-color: yellow; */
     background-image: url(images/star_yellow.svg);
 }
 
@@ -315,52 +314,54 @@ a {
     margin: 0;
 }
 
-.letters_box {
-    /* box-shadow: 0 0 15px 3px #e68932; */
-    background-image: linear-gradient(to bottom right, #e68932, orange, white);
-    color: var(--collection);
-}
-
-.gospels_box {
-    /* box-shadow: 0 0 15px 3px #70634b; */
-    background-image: linear-gradient(to bottom right, #70634b, #998a6d, white);
-    color: white;
-}
-
 .law_box {
     /* box-shadow: 0 0 15px 3px #cf2f23; */
-    background-image: linear-gradient(to bottom right, #cf2f23, #dc5318, #ecbfac);
+    background-image: linear-gradient(to bottom right, #174ab0 30%, #537ed4, #799de6);
     color: white;
 }
 
 .history_box {
     /* box-shadow: 0 0 15px 3px #174ab0; */
-    background-image: linear-gradient(to bottom right, #174ab0 30%, #537ed4, #799de6);
+    background-image: linear-gradient(to bottom right, #70634b, #998a6d, white);
     color: white;
 }
 
 .poetry_box {
     /* box-shadow: 0 0 15px 3px #ed8cea; */
-    background-image: linear-gradient(to bottom right, #ed8cea, #f5c2f4, white);
+    background-image: linear-gradient(to bottom right, #594b70 30%, #8676a0, white);
     color: var(--collection);
+    color: white;
+
 }
 
 .prophets_box {
     /* box-shadow: 0 0 15px 3px #396641; */
-    background-image: linear-gradient(to bottom right, #396641, #55875e, #abd6b2);
+    background-image: linear-gradient(to bottom right, #ed8cea, #f5c2f4, white);
+}
+
+
+.gospels_box {
+    /* box-shadow: 0 0 15px 3px #70634b; */
+    background-image: linear-gradient(to bottom right, #cf2f23, #dc5318, #ecbfac);
     color: white;
 }
 
 .church_box {
     /* box-shadow: 0 0 15px 3px #594b70; */
-    background-image: linear-gradient(to bottom right, #594b70 30%, #8676a0, white);
-    color: white;
+    background-image: linear-gradient(to bottom right, #e68932, orange, white);
+}
+
+.letters_box {
+    /* box-shadow: 0 0 15px 3px #e68932; */
+    background-image: linear-gradient(to bottom right, #f0e556, #f8f3a8, white);
+    color: var(--collection);
 }
 
 .prophecy_box {
     /* box-shadow: 0 0 15px 3px #ed8cea; */
-    background-image: linear-gradient(to bottom right, #f0e556, #f8f3a8, white);
+    background-image: linear-gradient(to bottom right, #396641, #55875e, #abd6b2);
     color: var(--collection);
+    color: white;
 }
 
 .sections+.fav_verse {
@@ -373,42 +374,42 @@ a {
 }
 
 .verse_law {
-    border-left: 5px solid #cf2f23;
-    border-radius: 10px;
-}
-
-.verse_history {
     border-left: 5px solid #174ab0;
     border-radius: 10px;
 }
 
-.verse_poetry {
-    border-left: 5px solid #ed8cea;
-    border-radius: 10px;
-}
-
-.verse_prophets {
-    border-left: 5px solid #396641;
-    border-radius: 10px;
-}
-
-.verse_gospels {
+.verse_history {
     border-left: 5px solid #70634b;
     border-radius: 10px;
 }
 
-.verse_church {
+.verse_poetry {
     border-left: 5px solid #594b70;
     border-radius: 10px;
 }
 
-.verse_letters {
+.verse_prophets {
+    border-left: 5px solid #ed8cea;
+    border-radius: 10px;
+}
+
+.verse_gospels {
+    border-left: 5px solid #cf2f23;
+    border-radius: 10px;
+}
+
+.verse_church {
     border-left: 5px solid #e89817;
     border-radius: 10px;
 }
 
-.verse_prophecy {
+.verse_letters {
     border-left: 5px solid #f0e556;
+    border-radius: 10px;
+}
+
+.verse_prophecy {
+    border-left: 5px solid #396641;
     border-radius: 10px;
 }
 
@@ -445,7 +446,7 @@ a {
     color: white;
 }
 
-.prophets_box #hidden {
+.poetry_box #hidden {
     color: white;
 }
 
@@ -453,7 +454,7 @@ a {
     color: white;
 }
 
-.church_box #hidden {
+.prophecy_box #hidden {
     color: white;
 }
 
@@ -779,7 +780,7 @@ input:checked+.slider:before {
 
 
 .verse {
-    background-color: var(--verse-bg);
+    background-color: var(--verse);
     color: var(--verse-clr);
     font-weight: bold;
     padding: 3%;

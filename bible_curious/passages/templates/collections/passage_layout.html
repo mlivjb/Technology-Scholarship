@@ -30,16 +30,19 @@
             <img src="{% static 'images/star_white.svg' %}" alt="">
         </a>
     </div>
+
+    
     <div class="back">
+        {% if session %}
+        <form method="post">
+            {% csrf_token %}
+            <span class="star story">
+                <input type="checkbox" name="fav_step" onClick="form.submit()" value="1" {{ step_is_fav }} />
+            </span>
+        </form>
+        {% endif %}
         <h3>
             <a href="/{{ story_href }}">&larr; storyline</a>
-            {% if session %}
-            <form method="post">
-                {% csrf_token %}
-                <input type="checkbox" name="fav_step" onClick="form.submit()" value="1" {{ step_is_fav }} />
-                <span class="star story"></span>
-            </form>
-            {% endif %}
         </h3>
     </div>
     <div class="content">

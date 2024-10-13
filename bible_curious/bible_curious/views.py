@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse, render, redirect
 from datetime import date, datetime
-from passages.models import Verse, FavouriteVerses, FavouriteMaps, FavouriteStep, Step
+from passages.models import Verse, FavouriteVerses, FavouriteStep, Step
 from authlib.integrations.django_client import OAuth
 from django.conf import settings
 from django.urls import reverse

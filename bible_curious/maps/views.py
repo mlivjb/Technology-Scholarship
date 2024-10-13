@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Map, FavouriteMap
+from .models import Map, FavouriteMaps
 
 
 # Create your views here.
@@ -29,13 +29,13 @@ def map(map_name):
         map_is_fav = None
         if session:
             sub = session['userinfo']['sub']
-            map_is_fav = FavouriteMap.objects.filter(user_sub=sub, name=map_name).first()
+            map_is_fav = FavouriteMaps.objects.filter(user_sub=sub, name=map_name).first()
             if request.method == "POST":
                 if map_is_fav:
                     map_is_fav.delete()
                     map_is_fav = None
                 else:
-                    map_is_fav = FavouriteMap(user_sub=sub, name=map_name)
+                    map_is_fav = FavouriteMaps(user_sub=sub, name=map_name)
                     map_is_fav.save()
         context = {
             "session": request.session.get("user"),

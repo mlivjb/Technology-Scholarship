@@ -62,7 +62,7 @@
             <form method="post">
                 {% csrf_token %}
                 <input type="checkbox" name="fav_verse" onClick="form.submit()" value="1" {{ verse_is_fav }} />
-                <span class="star"></span>
+                <span class="star versefav"></span>
             </form>
             {% endif %}
         </div>

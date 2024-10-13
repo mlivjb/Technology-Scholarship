@@ -11,9 +11,9 @@ class Map(models.Model):
         return f"{self.name}".replace(" ", "_").lower()
     
     
-class FavouriteMap(models.Model):
-    """Remember the users' favourite map"""
+class FavouriteMaps(models.Model):
+    """Remember the users' favourite verses"""
     user_sub = models.CharField(max_length=100, default="")
-    name = models.CharField(max_length=50, default="")
+    name = models.CharField(max_length=50)
     def  __str__(self) -> str:
         return f"({self.user_sub}) {self.name}"
